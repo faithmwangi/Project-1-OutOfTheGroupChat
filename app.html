@@ -27,6 +27,44 @@
         </div>
         <br>
     </header>
-     
+    <br>
+    <!--MAIN-->
+    <main>
+        <!--SECTION 1: PLAN A TRIP-->
+        <section id="plan">
+            <h3>step 1</h3>
+            <h1>Plan a Trip</h1>
+            <form class="trip-info">
+                <div id="name-the-trip">
+                    <label for="trip-name">Name the trip:</label>
+                    <input type="text" id="trip-name" name="trip-name">
+                </div>
+                <div id="location">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination">
+                </div>
+                <div id="num-of-people">
+                    <label for="num-people">Number of people:</label>
+                    <input type="number" id="num-people" name="num-people" min="1">
+                </div>
+                <div id="type-of-trip">
+                    <label for="trip-type">Type of trip:</label>
+                    <select name="trip-type" id="trip-type">
+                        <option value="none">(select type)</option>
+                        <option value="beach">Beach</option>
+                        <option value="nature">Nature and Wildlife</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="city">City Break</option>
+                        <option value="family">Family</option>
+                        <option value="romantic">Romantic</option>
+                    </select>
+                </div>
+                <div class="btn-1">
+                    <button type="button" id="continue-btn">Continue</button>
+                    <button type="submit" id="save-btn">Save</button>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
