@@ -65,21 +65,54 @@
                 <button type="save" id="save-btn">Save</button>
             </div>
         </section>
-        <!--SECTION 1: TRIP DATES-->
+        <!--SECTION 2: TRIP DATES-->
         <section id="step-2">
             <h3>step 2</h3>
             <h1>Trip Dates</h1>
             <form>
                 <label for="NumDays"><h2>Number of days</h2></label>
                 <input type="number" id="NumDays" name="NumDays" min="1"><br>
+
                 <label for="start">Start date:</label><br>
                 <input type="date" id="start" name="trip-start" min="2023-04-05"><br>
+
                 <label for="end">End date:</label><br>
                 <input type="date" id="end" name="trip-end"><br>
             </form>
             <div class="btn-2">
                 <button type="button" id="continue-btn-2">Continue</button>
                 <button type="save" id="save-btn-2">Save</button>
+            </div>
+        </section>
+        <!--SECTION 3: THE CREW-->
+        <section id="step-3">
+            <h3>step 3</h3>
+            <h1>The Crew</h1>
+            <div class="the-crew">
+            <fieldset>
+                <legend>Contact info:</legend>
+                <label for="crew-name">Name:</label>
+                <input type="tel" id="crew-name" name="crew-name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <br>
+                <legend>Emergency contact information:</legend>
+                <label for="emergency-name">Name:</label>
+                <input type="text" id="emergency-name" name="emergency-name" required>
+                
+                <label for="emergency-email">Email:</label>
+                <input type="email" id="emergency-email" name="emergency-email" required>
+                
+                <label for="emergency-phone">Phone:</label>
+                <input type="tel" id="emergency-phone" name="emergency-phone" required>
+                <br>
+                <button type="button" id="add-contact">Add contact</button>
+            </fieldset>
+            <div class="btn-3">
+                <button type="button" id="continue-btn-3">Continue</button>
+                <button type="save" id="save-btn-3">Save</button>
+            </div>
             </div>
         </section>
     </main>
