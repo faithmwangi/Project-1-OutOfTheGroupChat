@@ -69,19 +69,20 @@
         <section id="step-2">
             <h3>step 2</h3>
             <h1>Trip Dates</h1>
-            <form>
-                <label for="NumDays"><h2>Number of days</h2></label>
-                <input type="number" id="NumDays" name="NumDays" min="1"><br>
+            <div class = "trip-dates">
+                <form>
+                    <label for="NumDays"><h2>Number of days</h2></label>
+                    <input type="number" id="NumDays" name="NumDays" min="1"><br>
 
-                <label for="start">Start date:</label><br>
-                <input type="date" id="start" name="trip-start" min="2023-04-05"><br>
+                    <label for="start">Start date:</label><br>
+                    <input type="date" id="start" name="trip-start" min="2023-04-05"><br>
 
-                <label for="end">End date:</label><br>
-                <input type="date" id="end" name="trip-end"><br>
-            </form>
-            <div class="btn-2">
-                <button type="button" id="continue-btn-2">Continue</button>
-                <button type="save" id="save-btn-2">Save</button>
+                    <label for="end">End date:</label><br>
+                    <input type="date" id="end" name="trip-end"><br>
+
+                    <button type="button" id="#continue-btn-2">continue</button>
+                    <button type="submit" id="save-btn-2">save</button>
+                </form>
             </div>
         </section>
         <!--SECTION 3: THE CREW-->
@@ -92,20 +93,20 @@
                 <fieldset>
                     <legend>Contact info:</legend>
                     <label for="crew-name">Name:</label>
-                    <input type="tel" id="crew-name" name="crew-name" required>
+                    <input type="tel" id="crew-name" name="crew-name" required><br>
 
                     <label for="phone">Phone:</label>
                     <input type="tel" id="phone" name="phone" required>
                     <br>
-                    <legend>Emergency contact information:</legend>
+                    <legend>Emergency contact information:</legend><br>
                     <label for="emergency-name">Name:</label>
-                    <input type="text" id="emergency-name" name="emergency-name" required>
+                    <input type="text" id="emergency-name" name="emergency-name" required><br>
                     
                     <label for="emergency-email">Email:</label>
-                    <input type="email" id="emergency-email" name="emergency-email" required>
+                    <input type="email" id="emergency-email" name="emergency-email" required><br>
                     
                     <label for="emergency-phone">Phone:</label>
-                    <input type="tel" id="emergency-phone" name="emergency-phone" required>
+                    <input type="tel" id="emergency-phone" name="emergency-phone" required><br>
                     <br>
                     <button type="button" id="add-contact">Add contact</button>
                 </fieldset>
@@ -119,33 +120,33 @@
         <section id="step-4">
             <h3>step 4</h3>
             <h1>Transport Details</h1>
-            <div class="Transport-going">
+            <div class="transport-going">
                 <h3>To:</h3>
                 <button type="button" id="t-1">train</button>
                 <button type="button" id="h-1">hike</button>
-                <button type="button" id="b-2">bus</button><br>
+                <button type="button" id="b-2">bus</button>
                 <button type="button" id="f-1">flight</button>
                 <button type="button" id="boat-1">boat</button>
                 <br>
-                <div class="booked-going">
-                    <p>Have you booked?</p>
-                    <button type="button" id="yes-1">Yes</button>
-                    <button type="button" id="yes-1">No</button>
-                </div>
             </div>
-            <div class="Transport-return">
+            <div class="booked-going">
+                <p>Have you booked?</p>
+                <button type="button" id="yes-1">Yes</button>
+                <button type="button" id="yes-1">No</button>
+            </div>
+            <div class="transport-return">
                 <h3>From:</h3>
                 <button type="button" id="t-2">train</button>
                 <button type="button" id="h-2">hike</button>
-                <button type="button" id="b-2">bus</button><br>
+                <button type="button" id="b-2">bus</button>
                 <button type="button" id="f-2">flight</button>
                 <button type="button" id="boat-2">boat</button>
                 <br>
-                <div class="booked-return">
-                    <p>Have you booked?</p>
-                    <button type="button" id="yes-2">Yes</button>
-                    <button type="button" id="yes-2">No</button>
-                </div>
+            </div>
+            <div class="booked-return">
+                <p>Have you booked?</p>
+                <button type="button" id="yes-2">Yes</button>
+                <button type="button" id="yes-2">No</button>
             </div>
             <br>
             <div class="btn-4">

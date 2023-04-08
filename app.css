@@ -1,5 +1,18 @@
 
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
 
+button {
+    cursor: pointer;
+    background-color: #008b81;
+}
 /*LANGING PAGE*/
 header h3 {
     text-align: center;
@@ -124,6 +137,216 @@ header #slogan{
 
 #continue-btn:hover,
 #save-btn:hover {
+    cursor: pointer;
+    background-color: #008b81;
+}
+
+/*STEP 2 "Trip Dates"*/
+#step-2{
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-2 h3{
+    text-align: left;
+    margin-left: 30px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+}
+#step-2 h1{
+    font-size: 60px;
+}
+/*STEP 2 form*/
+.trip-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.trip-dates label {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.trip-dates input[type="date"], 
+.trip-dates input[type="number"]{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+.trip-dates input[type="number"]{
+    border-radius: 50%;
+    border-width: 6px;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*STEP 3 "The Crew" */
+#step-3{
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-3 h3{
+    text-align: left;
+    margin-left: 30px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+}
+#step-3 h1{
+    font-size: 60px;
+}
+fieldset{
+    max-width:500px;
+    margin-left: 31%;
+}
+/*STEP 3 fieldset*/
+legend{
+    font-size: 25px;
+}
+.the-crew {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.the-crew label {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.the-crew input[type="tel"], 
+.the-crew input[type="text"],
+.the-crew input[type="email"]{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+#continue-btn-3, #save-btn-3 {
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+#continue-btn-3:hover,
+#save-btn-3:hover {
+    cursor: pointer;
+    background-color: #008b81;
+}
+/*STEP 4 "Transport details"*/
+#step-4{
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-4 h3{
+    text-align: left;
+    margin-left: 30px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+}
+#step-4 h1{
+    font-size: 60px;
+}
+/*STEP 4 form*/
+
+.transport-going label{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.transport-going [type="button"]{
+    float: left;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: rgb(255, 253, 253);
+    border: none;
+    border-radius: 50%;
+    border-width: 6px;
+    width: 100px;
+    height: 100px;
+}
+.booked-going{
+    margin-bottom: 70px;
+}
+.booked-going button{
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+.booked-going p{
+    font-size: 25px;
+}
+.transport-return [type="button"]{
+    float: left;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: rgb(255, 253, 253);
+    border: none;
+    border-radius: 50%;
+    border-width: 6px;
+    width: 100px;
+    height: 100px;
+}
+.transport-return{
+    margin-bottom: 70px;
+}
+.booked-return{
+    margin-left: 40%;
+    margin-top: -90px;
+    margin-bottom: 40px;
+}
+.booked-return button{
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+
+}
+.booked-return p{
+    font-size: 25px;
+}
+#continue-btn-4, #save-btn-4{
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+#continue-btn-4:hover,
+#save-btn-4:hover {
     cursor: pointer;
     background-color: #008b81;
 }
