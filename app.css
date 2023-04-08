@@ -410,3 +410,81 @@ legend{
     cursor: pointer;
     background-color: #008b81;
 }
+/*STEP 6 "Accomodation"*/
+#step-6{
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-6 h3{
+    text-align: left;
+    margin-left: 30px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+}
+#step-6 h1{
+    font-size: 50px;
+}
+#step-6 label{
+    font-size: 20px;
+}
+#step-6 input{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+/*STEP 6 form*/
+.accomodation {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.accomodation label {
+    font-size: 30px;
+}
+.accomodation ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.accomodation li{
+    width: 335px;
+    background-color: #f9f9f9;
+    box-shadow: 5px 5px lightblue;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: brightness(10px);
+}
+.accomodation input[type="text"]{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+#continue-btn-6, #save-btn-6 {
+    justify-content: center;
+ 
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+#continue-btn-6:hover,
+#save-btn-6:hover {
+    cursor: pointer;
+    background-color: #008b81;
+}
