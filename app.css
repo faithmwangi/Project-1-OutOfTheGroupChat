@@ -547,3 +547,62 @@ legend{
     cursor: pointer;
     background-color: #008b81;
 }
+/*STEP 8 "Itinerary"*/
+#step-8{
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-8 h3{
+    text-align: left;
+    margin-left: 30px;
+    color: rgb(136, 136, 136);
+    font-size: 30px;
+}
+#step-8 h1{
+    font-size: 50px;
+}
+#step-8 label{
+    font-size: 20px;
+}
+#step-8 input{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+/*STEP 8 form*/
+.itinerary {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.itinerary label {
+    font-size: 30px;
+}
+.itinerary input[type="text"]{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+#continue-btn-8, #save-btn-8 {
+    justify-content: center;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+#continue-btn-8:hover,
+#save-btn-8:hover {
+    cursor: pointer;
+    background-color: #008b81;
+}
