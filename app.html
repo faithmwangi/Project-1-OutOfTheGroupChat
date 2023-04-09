@@ -8,7 +8,7 @@
     <link rel="stylesheet"  type="text/css" href="app.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <!--LANDING PAGE-->
         <h3>OutOfTheGroupChat</h3>
         <h1>PLAN <span>YOUR </span><br><span>ADVENTURE!</span></h1>
@@ -61,7 +61,8 @@
                 </div>
             </form>
             <div class="btn-1">
-                <button type="button" id="continue-btn">Continue</button>
+                <a href="#header" class="previous">&laquo; Previous</a>
+                <a href="#step-2" class="next">Next &raquo;</a>
                 <button type="save" id="save-btn">Save</button>
             </div>
         </section>
@@ -80,7 +81,8 @@
                     <label for="end">End date:</label><br>
                     <input type="date" id="end" name="trip-end"><br>
 
-                    <button type="button" id="#continue-btn-2">continue</button>
+                    <a href="#plan" class="previous">&laquo; Previous</a>
+                    <a href="#step-3" class="next">Next &raquo;</a>
                     <button type="submit" id="save-btn-2">save</button>
                 </form>
             </div>
@@ -111,7 +113,8 @@
                     <button type="button" id="add-contact">Add contact</button>
                 </fieldset>
                 <div class="btn-3">
-                    <button type="button" id="continue-btn-3">Continue</button>
+                    <a href="#step-2" class="previous">&laquo; Previous</a>
+                    <a href="#step-4" class="next">Next &raquo;</a>
                     <button type="save" id="save-btn-3">Save</button>
                 </div>
             </div>
@@ -150,7 +153,8 @@
             </div>
             <br>
             <div class="btn-4">
-                <button type="button" id="continue-btn-4">Continue</button>
+                <a href="#step-3" class="previous">&laquo; Previous</a>
+                <a href="#step-5" class="next">Next &raquo;</a>
                 <button type="save" id="save-btn-4">Save</button>
             </div>
         </section>
@@ -181,7 +185,8 @@
             </div>
             <br>
             <div class="btn-5">
-                <button type="button" id="continue-btn-5">Continue</button>
+                <a href="#step-4" class="previous">&laquo; Previous</a>
+                <a href="#step-6" class="next">Next &raquo;</a>
                 <button type="save" id="save-btn-5">Save</button>
             </div>
         </section>
@@ -207,7 +212,8 @@
             </div>
             <br>
             <div class="btn-6">
-                <button type="button" id="continue-btn-6">Continue</button>
+                <a href="#step-5" class="previous">&laquo; Previous</a>
+                <a href="#step-7" class="next">Next &raquo;</a>
                 <button type="save" id="save-btn-6">Save</button>
             </div>
         </section>
@@ -229,7 +235,8 @@
                 <input type="text" id="pl-4" name="pl-4"><br>
             </div>
             <div class="btn-7">
-                <button type="button" id="continue-btn-7">Continue</button>
+                <a href="#step-6" class="previous">&laquo; Previous</a>
+                <a href="#step-8" class="next">Next &raquo;</a>
                 <button type="save" id="save-btn-7">Save</button>
             </div>
         </section>
@@ -248,8 +255,8 @@
                 <input type="text" id="activities" name="activities"><br>
             </div>
             <div class="btn-8">
-                <button type="button" id="continue-btn-8">Continue</button>
-                <button type="save" id="save-btn-8">Save</button>
+                <a href="#step-7" class="previous">&laquo; Previous</a>
+                <a href="#submit-pdf" class="next">FINISH &raquo;</a>
             </div>
         </section>
         <!--SECTION 9: SUBMIT PDF-->

@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(244, 218, 183);
+}
 
 button {
     font-size: 20px;
@@ -71,7 +74,7 @@ header #slogan{
     margin-top: 200px;
     font-size: 20px;
 }
-  
+
 /*STEP 1: PLAN A TRIP*/
 #plan{
     text-align: center;
