@@ -126,37 +126,43 @@
             <h1>Transport Details</h1>
             <div class="transport-going">
                 <h3>To:</h3>
-                <button type="button" id="t-1">train</button>
-                <button type="button" id="h-1">hike</button>
-                <button type="button" id="b-2">bus</button>
-                <button type="button" id="f-1">flight</button>
-                <button type="button" id="boat-1">boat</button>
-                <br>
+                <div class="transport-buttons">
+                    <button type="button" id="t-1" class="transport-button">Train</button>
+                    <button type="button" id="h-1" class="transport-button">Hike</button>
+                    <button type="button" id="b-1" class="transport-button">Bus</button>
+                    <button type="button" id="f-1" class="transport-button">Flight</button>
+                    <button type="button" id="boat-1" class="transport-button">Boat</button>
+                </div>
             </div>
             <div class="booked-going">
                 <p>Have you booked?</p>
-                <button type="button" id="yes-1">Yes</button>
-                <button type="button" id="yes-1">No</button>
+                <select>
+                    <option value="yes-1">Yes</option>
+                    <option value="no-1">No</option>
+                </select>
             </div>
             <div class="transport-return">
                 <h3>From:</h3>
-                <button type="button" id="t-2">train</button>
-                <button type="button" id="h-2">hike</button>
-                <button type="button" id="b-2">bus</button>
-                <button type="button" id="f-2">flight</button>
-                <button type="button" id="boat-2">boat</button>
-                <br>
+                <div class="transport-buttons">
+                    <button type="button" id="t-2" class="transport-button-1">Train</button>
+                    <button type="button" id="h-2" class="transport-button-1">Hike</button>
+                    <button type="button" id="b-2" class="transport-button-1">Bus</button>
+                    <button type="button" id="f-2" class="transport-button-1">Flight</button>
+                    <button type="button" id="boat-2" class="transport-button-1">Boat</button>
+                </div>
             </div>
             <div class="booked-return">
                 <p>Have you booked?</p>
-                <button type="button" id="yes-2">Yes</button>
-                <button type="button" id="yes-2">No</button>
+                <select>
+                    <option value="yes-2">Yes</option>
+                    <option value="no-2">No</option>
+                </select>
             </div>
+              
             <br>
             <div class="btn-4">
                 <a href="#step-3" class="previous">&laquo; Previous</a>
                 <a href="#step-5" class="next">Next &raquo;</a>
-                <button type="save" id="save-btn-4">Save</button>
             </div>
         </section>
         <!--SECTION 5: BUDGET-->

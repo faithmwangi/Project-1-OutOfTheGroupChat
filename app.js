@@ -69,6 +69,24 @@ addContactButton.addEventListener("click", function(event) {
   document.getElementById("emergency-phone").value = "";
 });
 
+//TRANSPORT OPTIONS
+const goingButtons = document.querySelectorAll('.transport-button');
+
+goingButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    goingButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});
+const returnButtons = document.querySelectorAll('.transport-button-1');
+
+returnButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    returnButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});
+
 
 var button = document.getElementById("generate-pdf");
   button.addEventListener("click", function () {
@@ -82,9 +100,15 @@ var button = document.getElementById("generate-pdf");
       var typeOfTrip = "Type of trip " + $('input[name="trip-type"]').val();
       //TRIP DATE
       var tripDuration = "Trip duration (days): " + $('input[name="NumDays"]').val();
-      var tripStart = "Start date: " + $('input[name="trip-start"]');
-      var tripEnd = "End date: " + $('input[name="trip-end"]');
-      //THE CREW
+      var tripStart = "Start date: " + $('input[name="trip-start"]').val();
+      var tripEnd = "End date: " + $('input[name="trip-end"]').val();
+      // THE CREW
+      var contactsList = "";
+      for (var i = 0; i < contacts.length; i++) {
+        contactsList += contacts[i].crewName + " - " + contacts[i].phone + " - " + contacts[i].emergencyName + " - " + contacts[i].emergencyEmail + " - " + contacts[i].emergencyPhone + "\n";
+      }
+      var crewTitle = "The Crew:";
+      //TRANSPORT
       //PAGE TITLE
       doc.text(pageTitle, 20, 20);
       //TRIP INFO
@@ -97,5 +121,9 @@ var button = document.getElementById("generate-pdf");
       doc.text(tripStart, 20, 80)
       doc.text(tripEnd, 20, 90)
       //THE CREW
+      doc.text(crewTitle, 20, 110);
+      doc.text(contactsList, 20, 120);
+      //TRANSPORT
       doc.save("outOfTheGroupChat.pdf");
+      
   });

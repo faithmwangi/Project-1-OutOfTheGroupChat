@@ -299,7 +299,7 @@ legend{
 .booked-going{
     margin-bottom: 70px;
 }
-.booked-going button{
+.booked-going select{
     justify-content: center;
     display: inline-block;
     font-size: 20px;
@@ -313,6 +313,7 @@ legend{
 .booked-going p{
     font-size: 25px;
 }
+
 .transport-return [type="button"]{
     float: left;
     display: inline-block;
@@ -336,7 +337,7 @@ legend{
     margin-top: -90px;
     margin-bottom: 40px;
 }
-.booked-return button{
+.booked-return select{
     justify-content: center;
     display: inline-block;
     font-size: 20px;
@@ -350,22 +351,18 @@ legend{
 .booked-return p{
     font-size: 25px;
 }
-#continue-btn-4, #save-btn-4{
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
+.transport-buttons button:hover,
+.transport-button.active-1 button:hover{
+    background-color: #555;
+}
+
+.transport-button.active,
+.transport-button-1.active {
+    background-color: #4caf50;
     color: white;
-    border: none;
-    margin-right: 10px;
 }
-#continue-btn-4:hover,
-#save-btn-4:hover {
-    cursor: pointer;
-    background-color: #008b81;
-}
+  
+
 /*STEP 5 "Budget"*/
 #step-5{
     text-align: center;
