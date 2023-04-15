@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OutOfTheGroupChat</title>
     <link rel="stylesheet"  type="text/css" href="app.css">
+    <!--JSPDF CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body>
+<body id="travelPlanner">
     <header id="header">
         <!--LANDING PAGE-->
-        <h3>OutOfTheGroupChat</h3>
-        <h1>PLAN <span>YOUR </span><br><span>ADVENTURE!</span></h1>
+        <div id="page-title">
+            <h3>OutOfTheGroupChat</h3>
+            <h1>PLAN <span>YOUR </span><br><span>ADVENTURE!</span></h1>
+        </div>
         <section id="nav-bar">
             <nav>
                 <ul>
@@ -92,26 +97,22 @@
             <h3>step 3</h3>
             <h1>The Crew</h1>
             <div class="the-crew">
-                <fieldset>
-                    <legend>Contact info:</legend>
+                <form id="contact-form">
                     <label for="crew-name">Name:</label>
-                    <input type="tel" id="crew-name" name="crew-name" required><br>
-
+                    <input type="text" id="crew-name" required><br>
+                  
                     <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <br>
-                    <legend>Emergency contact information:</legend><br>
-                    <label for="emergency-name">Name:</label>
-                    <input type="text" id="emergency-name" name="emergency-name" required><br>
-                    
-                    <label for="emergency-email">Email:</label>
-                    <input type="email" id="emergency-email" name="emergency-email" required><br>
-                    
-                    <label for="emergency-phone">Phone:</label>
-                    <input type="tel" id="emergency-phone" name="emergency-phone" required><br>
-                    <br>
-                    <button type="button" id="add-contact">Add contact</button>
-                </fieldset>
+                    <input type="tel" id="phone" required><br>
+                  
+                    <label for="emergency-name">Emergency Contact Name:</label>
+                    <input type="text" id="emergency-name" required><br>
+                  
+                    <label for="emergency-phone">Emergency Contact Phone:</label>
+                    <input type="tel" id="emergency-phone" required><br>
+                  
+                    <button type="submit" id="add-contact-btn">Add Contact</button>
+                </form>
+                <ul id="contact-list"></ul>
                 <div class="btn-3">
                     <a href="#step-2" class="previous">&laquo; Previous</a>
                     <a href="#step-4" class="next">Next &raquo;</a>
@@ -263,7 +264,8 @@
         <section id="submit-pdf">
             <h1>OH HEY <br>VACAY</h1>
             <p>BASICALLY OUT <br>OF THE <br>GROUP CHAT!</p>
-            <button type="submit" id="download">Download Pdf</button>
+            <button id="generate-pdf">Generate PDF</button>
+            
         </section>
         <!--SECTION 10: MY TRIPS-->
         <section id="trips">
@@ -291,7 +293,6 @@
             </ul>
         </section> 
     </main>
-    <script src="trips.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
