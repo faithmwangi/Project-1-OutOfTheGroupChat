@@ -69,25 +69,10 @@ addContactButton.addEventListener("click", function(event) {
   document.getElementById("emergency-phone").value = "";
 });
 
-//TRANSPORT OPTIONS
-const goingButtons = document.querySelectorAll('.transport-button');
-
-goingButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    goingButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
-});
-const returnButtons = document.querySelectorAll('.transport-button-1');
-
-returnButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    returnButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-  });
-});
 
 
+
+//GENERATE PDF
 var button = document.getElementById("generate-pdf");
   button.addEventListener("click", function () {
       var doc = new jsPDF("p", "mm", [300, 300]);
@@ -108,7 +93,12 @@ var button = document.getElementById("generate-pdf");
         contactsList += contacts[i].crewName + " - " + contacts[i].phone + " - " + contacts[i].emergencyName + " - " + contacts[i].emergencyEmail + " - " + contacts[i].emergencyPhone + "\n";
       }
       var crewTitle = "The Crew:";
-      //TRANSPORT
+      //TRANSPORTATION BOOKING
+      var transportGoing = "Going by: " + $('input[name="transport"]:checked').val();
+      var transportBooked = "Booked: " + $("#bGoing").val();
+      var transportReturn = "Returning by: " + $('input[name="transport-2"]:checked').val();
+      var returnBooked = "Booked: " + $("#bReturn").val();
+
       //PAGE TITLE
       doc.text(pageTitle, 20, 20);
       //TRIP INFO
@@ -124,6 +114,11 @@ var button = document.getElementById("generate-pdf");
       doc.text(crewTitle, 20, 110);
       doc.text(contactsList, 20, 120);
       //TRANSPORT
+      doc.text(transportGoing, 20, 140);
+      doc.text(transportBooked, 20, 150)
+      doc.text(transportReturn, 20, 160);
+      doc.text(returnBooked, 20, 170)
+      
       doc.save("outOfTheGroupChat.pdf");
       
   });

@@ -310,7 +310,7 @@ legend{
     border: none;
     margin-right: 10px;
 }
-.booked-going p{
+.booked-going label{
     font-size: 25px;
 }
 
@@ -348,7 +348,7 @@ legend{
     border: none;
 
 }
-.booked-return p{
+.booked-return label{
     font-size: 25px;
 }
 .transport-buttons button:hover,
