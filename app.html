@@ -21,7 +21,6 @@
             <nav>
                 <ul>
                     <li><a href="#plan"> Plan a Trip </a></li>
-                    <li><a href="#trips"> My Trips </a></li>
                     <li><a href="#ideas"> Trip Ideas </a></li>
                 </ul>  
             </nav>
@@ -35,10 +34,39 @@
     <br>
     <!--MAIN-->
     <main>
+        <!---USER GUIDE-->
+        <section id="userGuide">
+            <h1>Using OutOfTheGroupChat: <span>A Step-by-Step Guide</span></h1>
+            <p>Our trip planner app helps you prioritize and plan your trip with your group,
+                 saving you time and providing an organized format for all the important details.</p>
+
+            <h3>User Guide:</h3>
+            <ul>
+                <li>To navigate to the next page, click the "Next" button.</li>
+                <li>To go back to the previous page, click the "Previous" button.</li>
+                <li>When you reach the end of the planner, press the "Download PDF" button to obtain a copy of your trip plan.</li>
+                <li>Additional instructions can be found on each page to help you use the planner more effectively.</li>
+                <li>Be as specific as possible to help with planning and organization.</li>
+            </ul>
+            <h4>Note: </h4>
+            <ul>
+                <li>Do not reload the page, as this will cause your information to be lost.</li>
+                <li>All sections do not need to be filled out in order to download a PDF of your trip plan.</li>
+            </ul>
+            <p>Happy planning and safe travels!</p>
+            <a href="#plan" class="next">Next &raquo;</a>
+
+        </section>
         <!--SECTION 1: PLAN A TRIP-->
         <section id="plan">
             <h3>step 1</h3>
             <h1>Plan a Trip</h1>
+            <ul>
+                <li>Give your trip a catchy name that will help you remember it!</li>
+                <li>Enter the number of people that will be going on the trip.</li>
+                <li>Select the type of trip from the dropdown menu.</li>
+                <li>Enter your destination in the text field provided.</li>
+            </ul>
             <form class="trip-info">
                 <div id="name-the-trip">
                     <label for="trip-name">Name the trip:</label>
@@ -66,18 +94,22 @@
                 </div>
             </form>
             <div class="btn-1">
-                <a href="#header" class="previous">&laquo; Previous</a>
+                <a href="#userGuide" class="previous">&laquo; Previous</a>
                 <a href="#step-2" class="next">Next &raquo;</a>
-                <button type="save" id="save-btn">Save</button>
             </div>
         </section>
         <!--SECTION 2: TRIP DATES-->
         <section id="step-2">
             <h3>step 2</h3>
             <h1>Trip Dates</h1>
+            <ul>
+                <li>Enter your trip start date and end date in the fields provided.</li>
+                <li>The number of days in your trip will be automatically calculated and displayed in the circle.</li>
+            </ul>
             <div class = "trip-dates">
                 <form>
                     <label for="NumDays"><h2>Number of days</h2></label>
+                    <p>If the number of days is incorrect, please double-check your dates and adjust them as needed.</p>
                     <input type="number" id="NumDays" name="NumDays" min="1"><br>
 
                     <label for="start">Start date:</label><br>
@@ -86,24 +118,29 @@
                     <label for="end">End date:</label><br>
                     <input type="date" id="end" name="trip-end"><br>
 
+                    <p>Once you have confirmed the correct number of days, you can move on to the next step of planning your trip!</p>
+
                     <a href="#plan" class="previous">&laquo; Previous</a>
                     <a href="#step-3" class="next">Next &raquo;</a>
-                    <button type="submit" id="save-btn-2">save</button>
                 </form>
             </div>
         </section>
         <!--SECTION 3: THE CREW-->
         <section id="step-3">
             <h3>step 3</h3>
-            <h1>The Crew</h1>
+            <h1>Contacts</h1>
             <div class="the-crew">
+                <p>Enter the member's name and phone number.</p>
+
                 <form id="contact-form">
                     <label for="crew-name">Name:</label>
                     <input type="text" id="crew-name" required><br>
                   
                     <label for="phone">Phone:</label>
                     <input type="tel" id="phone" required><br>
-                  
+
+                    <p>If desired, you can also add emergency contacts for each group member.</p>
+                   
                     <label for="emergency-name">Emergency Contact Name:</label>
                     <input type="text" id="emergency-name" required><br>
                   
@@ -116,7 +153,6 @@
                 <div class="btn-3">
                     <a href="#step-2" class="previous">&laquo; Previous</a>
                     <a href="#step-4" class="next">Next &raquo;</a>
-                    <button type="save" id="save-btn-3">Save</button>
                 </div>
             </div>
         </section>
@@ -124,6 +160,15 @@
         <section id="step-4">
             <h3>step 4</h3>
             <h1>Transport Details</h1>
+            <p>Life is short, take the scenic route!</p>
+            <div id="tips">
+                <h4> *Tips* </h4>
+                <ul>
+                    <li>Consider your budget</li>
+                    <li>Book in advance</li>
+                    <li>Plan for delays</li>
+                </ul>
+            </div>
             <div class="transport-going">
                 <h3>To:</h3>
                 <div class="transport-buttons">
@@ -174,6 +219,9 @@
                 <label for="budget"><h2>Budget</h2></label>
                 <input type="number" id="budget" name="budget"><br>
             </div>
+            <p>This page is for the total group cost.<br>
+                Individual costs will be calculated and added to the PDF based on 
+                the number of people in the group.</p>
             <br>
             <div class="cost-breakdown">
                 <h1>Cost breakdown</h1>
@@ -201,28 +249,74 @@
         <!--SECTION 6: ACCOMODATION-->
         <section id="step-6">
             <h3>step 6</h3>
-            <h1>Accomodation</h1>
-            <div class="accomodation">
+            <h1>Accommodation</h1>
+            <div class="accommodation">
+            <p>"Additional Features" can include amenities like a private pool, personal chef, 
+                beachfront location, or even an all-inclusive package.</p>
+            <form>
                 <ul>
-                    <lil>
-                        <label for="op1">Option 1</label><br>
-                        <input type="text" id="op-1" name="op-1"><br>
-                    </lil>
+                <div id="option1">
                     <li>
-                        <label for="op2">Option 2</label><br>
-                        <input type="text" id="op-1" name="op-2"><br>
+                        <label for="option1Name">Option 1 Name:</label>
+                        <input type="text" id="option1Name" name="option1Name">
                     </li>
                     <li>
-                        <label for="op3">Option 3</label><br>
-                        <input type="text" id="op-3" name="op-3"><br>
+                        <label for="option1Cost">Cost:</label>
+                        <input type="number" id="option1Cost" name="option1Cost">
                     </li>
+                    <li>
+                        <label for="option1Rooms">Number of Rooms:</label>
+                        <input type="number" id="option1Rooms" name="option1Rooms">
+                    </li>
+                    <li>
+                        <label for="option1Features">Additional Features:</label>
+                        <textarea id="option1Features" name="option1Features"></textarea>
+                    </li>
+                </div>
+                <div id="option2">
+                    <li>
+                        <label for="option2Name">Option 2 Name:</label>
+                        <input type="text" id="option2Name" name="option2Name">
+                    </li>
+                    <li>
+                        <label for="option2Cost">Cost:</label>
+                        <input type="number" id="option2Cost" name="option2Cost">
+                    </li>
+                    <li>
+                        <label for="option2Rooms">Number of Rooms:</label>
+                        <input type="number" id="option2Rooms" name="option2Rooms">
+                    </li>
+                    <li>
+                        <label for="option2Features">Additional Features:</label>
+                        <textarea id="option2Features" name="option2Features"></textarea>
+                    </li>
+                </div>
+                <div id="option3">
+                    <li>
+                        <label for="option3Name">Name:</label>
+                        <input type="text" id="option3Name" name="option3Name">
+                    </li>
+                    <li>
+                        <label for="option3Cost">Cost:</label>
+                        <input type="number" id="option3Cost" name="option3Cost">
+                    </li>
+                    <li>
+                        <label for="option3Rooms">Number of Rooms:</label>
+                        <input type="number" id="option3Rooms" name="option3Rooms">
+                    </li>
+                    <li>
+                        <label for="option3Features">Additional Features:</label>
+                        <textarea id="option3Features" name="option3Features"></textarea>
+                    </li>
+                </div>
                 </ul>
+            </form>
             </div>
+
             <br>
             <div class="btn-6">
                 <a href="#step-5" class="previous">&laquo; Previous</a>
                 <a href="#step-7" class="next">Next &raquo;</a>
-                <button type="save" id="save-btn-6">Save</button>
             </div>
         </section>
         <!--SECTION 7: PACKING LIST-->
@@ -231,15 +325,19 @@
             <h1>Packing List</h1>
             <div class="packing-list">
                 <label for="pl-1">Travel documents</label><br>
+                <p>*Passport, Travel Insurance, ID, DL, Credit Card, Visa etc*</p>
                 <input type="text" id="pl-1" name="pl-1"><br>
 
                 <label for="pl-2">Hygiene & Medical</label><br>
+                <p>*Sanitizer, Wipes, Repellent, Basic first-aid kit, Toothpaste/brush etc*</p>
                 <input type="text" id="pl-2" name="pl-2"><br>
 
-                <label for="pl-3">Clothing, footwear & beauty</label><br>
+                <label for="pl-3">Clothing, Footwear & Beauty</label><br>
+                <p>*Slippers, Hat, Pajamas, Sunscreen etc*</p>
                 <input type="text" id="pl-3" name="pl-3"><br>
 
                 <label for="pl-4">Electronics</label><br>
+                <p>*Travel-sized iron, Charger, Universal Adapter, Portable Speaker etc*</p>
                 <input type="text" id="pl-4" name="pl-4"><br>
             </div>
             <div class="btn-7">
@@ -251,6 +349,7 @@
         <section id="step-8">
             <h3>step 8</h3>
             <h1>Itinerary</h1>
+            <p>Remember to be flexible and have a backup plan!</p>
             <div class="itinerary">
                 <label for="eating">Eating spots</label><br>
                 <input type="text" id="eating" name="eating"><br>
@@ -269,34 +368,41 @@
         <!--SECTION 9: SUBMIT PDF-->
         <section id="submit-pdf">
             <h1>OH HEY <br>VACAY</h1>
-            <p>BASICALLY OUT <br>OF THE <br>GROUP CHAT!</p>
+            <p>MAKING MEMORIES<br>ALL OVER THE WORLD,<br>ONE TRIP AT A TIME!</p>
             <button id="generate-pdf">Generate PDF</button>
             
-        </section>
-        <!--SECTION 10: MY TRIPS-->
-        <section id="trips">
-            <h1>My Trips</h1>
-            <fieldset>
-                <legend>All saved trips</legend>
-            </fieldset>
         </section>
         <!--SECTION 11: TRIP IDEAS-->
         <section id="ideas">
             <h1>Trip ideas</h1>
-            <ul>
-                <li>
-                    <h2>Group of 1-5</h2>
-                    <p>Input idea here</p>
-                </li>
-                <li>
-                    <h2>Group of 5-10</h2>
-                    <p>Input idea here</p>
-                </li>
-                <li>
-                    <h2>Group of 10+</h2>
-                    <p>Input idea here</p>
-                </li>
-            </ul>
+            <div id="idea1">
+                <h2>Safari Adventure in Maasai Mara</h2>
+                <p>Experience the thrill of wildlife in the famous Maasai Mara Game Reserve.</p>
+                <ul>
+                    <li>Stay at a tented camp or lodge and enjoy the sounds of the wilderness.</li>
+                    <li>Take a hot air balloon ride for an aerial view of the wildlife.</li>
+                    <li>Visit a Maasai village and learn about their culture.</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Coastal Getaway</h2>
+                <p>Relax on the sandy beaches and soak up the sun.</p>
+                <ul>
+                    <li>Stay in a beautiful villa by the beach with your groups.</li>
+                    <li>Enjoy water sports activities such as jet skiing, snorkelling, and diving.</li>
+                    <li>Visit historical sites such as Fort Jesus and the Old Town of Mombasa</li>
+                    <li>Explore marine life at the Marine National Park in Malindi</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Mount Kenya Hiking Expedition</h2>
+                <p>Enjoy breathtaking views of the mountain range and surrounding landscape.</p>
+                <ul>
+                    <li>Trek to the summit of Mount Kenya, the second highest mountain in Africa.</li>
+                    <li>Camp along the way and experience the beauty of nature.</li>
+                    <li>Visit the nearby Ol Pejeta Conservancy and see endangered wildlife like rhinos and chimpanzees.</li>
+                </ul>
+            </div>
         </section> 
     </main>
     <script src="app.js"></script>
