@@ -98,7 +98,22 @@ var button = document.getElementById("generate-pdf");
       var transportBooked = "Booked: " + $("#bGoing").val();
       var transportReturn = "Returning by: " + $('input[name="transport-2"]:checked').val();
       var returnBooked = "Booked: " + $("#bReturn").val();
-
+      //BUDGET
+      var budget = "Trip Budget: Ksh " + $('input[name="budget"]').val();
+      var transportCost = "Transport: Ksh " + $('input[name="t-cost"]').val();
+      var accomodationCost = "Accomodation: Ksh " + $('input[name="a-cost"]').val();
+      var groceriesCost = "Groceries: Ksh " + $('input[name="g-cost"]').val();
+      var drinksCost = "Drinks: Ksh " + $('input[name="d-cost"]').val();
+      var entertainmentCost = "Entertainment: Ksh " + $('input[name="e-cost"]').val();
+      //PACKING LIST
+      var travelDocuments = "Travel Documents:" + $('input[name="pl-1"]').val();
+      var hygienceMedical = "Hygiene & Medical:" + $('input[name="pl-2"]').val();
+      var clothingShoesBeauty = "Clothing, Footwear & Beauty:" + $('input[name="pl-2"]').val();
+      var electronics = "Electronics:" + $('input[name="pl-3"]').val();
+      //ITINERARY
+      var eatingSpots = "Eating Spots:" + $('input[name="eating"]').val(); //add reminder to reserve
+      var siteSeeing = "Site-seeing:" + $('input[name="site-seeing"]').val();
+      var tripActivities = "Activities:" + $('input[name="activities"]').val();
       //PAGE TITLE
       doc.text(pageTitle, 20, 20);
       //TRIP INFO
@@ -118,6 +133,25 @@ var button = document.getElementById("generate-pdf");
       doc.text(transportBooked, 20, 150)
       doc.text(transportReturn, 20, 160);
       doc.text(returnBooked, 20, 170)
+      //BUDGET
+      doc.text(budget, 20, 190)
+      doc.text(transportCost, 20, 200)
+      doc.text(accomodationCost, 20, 210)
+      doc.text(groceriesCost, 20, 220)
+      doc.text(drinksCost, 20, 230)
+      doc.text(entertainmentCost, 20, 240)
+      // new page
+      doc.addPage();
+      //PACKING LIST
+      doc.text(travelDocuments, 20, 30)
+      doc.text(hygienceMedical, 20, 40)
+      doc.text(clothingShoesBeauty, 20, 50)
+      doc.text(electronics, 20, 60)
+      //ITINERARY
+      doc.text(eatingSpots, 20, 80)
+      doc.text(siteSeeing, 20, 90)
+      doc.text(tripActivities, 20, 100)
+
       
       doc.save("outOfTheGroupChat.pdf");
       
