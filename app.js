@@ -69,6 +69,12 @@ addContactButton.addEventListener("click", function(event) {
   document.getElementById("emergency-phone").value = "";
 });
 
+//CALCULATE COST
+const budgetInput = document.getElementById('budget');
+const budget = budgetInput.value;
+const numOfPeople = document.getElementById('num-people');
+const costPerPerson = budget / numOfPeople;
+
 
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OutOfTheGroupChat</title>
     <link rel="stylesheet"  type="text/css" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" >
     <!--JSPDF CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -20,8 +21,8 @@
         <section id="nav-bar">
             <nav>
                 <ul>
-                    <li><a href="#plan"> Plan a Trip </a></li>
-                    <li><a href="#ideas"> Trip Ideas </a></li>
+                    <li><a href="#userGuide"> Plan a Trip </a></li>
+                    <li><a href="#tripIdeas"> Trip Ideas </a></li>
                 </ul>  
             </nav>
             <br>
@@ -36,9 +37,7 @@
     <main>
         <!---USER GUIDE-->
         <section id="userGuide">
-            <h1>Using OutOfTheGroupChat: <span>A Step-by-Step Guide</span></h1>
-            <p>Our trip planner app helps you prioritize and plan your trip with your group,
-                 saving you time and providing an organized format for all the important details.</p>
+            <h1>Using OutOfTheGroupChat: <br><span>A Step-by-Step Guide</span></h1>
 
             <h3>User Guide:</h3>
             <ul>
@@ -48,13 +47,15 @@
                 <li>Additional instructions can be found on each page to help you use the planner more effectively.</li>
                 <li>Be as specific as possible to help with planning and organization.</li>
             </ul>
-            <h4>Note: </h4>
-            <ul>
-                <li>Do not reload the page, as this will cause your information to be lost.</li>
-                <li>All sections do not need to be filled out in order to download a PDF of your trip plan.</li>
-            </ul>
+            <div class="bubble">
+                <h4>Note: </h4>
+                <ul>
+                    <li>Do not reload the page, as this will cause your information to be lost.</li>
+                    <li>All sections do not need to be filled out in order to download a PDF of your trip plan.</li>
+                </ul>
+            </div>
             <p>Happy planning and safe travels!</p>
-            <a href="#plan" class="next">Next &raquo;</a>
+            <a href="#plan" class="next">Start &raquo;</a>
 
         </section>
         <!--SECTION 1: PLAN A TRIP-->
@@ -62,10 +63,10 @@
             <h3>step 1</h3>
             <h1>Plan a Trip</h1>
             <ul>
-                <li>Give your trip a catchy name that will help you remember it!</li>
-                <li>Enter the number of people that will be going on the trip.</li>
-                <li>Select the type of trip from the dropdown menu.</li>
-                <li>Enter your destination in the text field provided.</li>
+                <li>*Give your trip a catchy name that will help you remember it!</li>
+                <li>*Enter the number of people that will be going on the trip.</li>
+                <li>*Select the type of trip from the dropdown menu.</li>
+                <li>*Enter your destination in the text field provided.</li>
             </ul>
             <form class="trip-info">
                 <div id="name-the-trip">
@@ -102,53 +103,62 @@
         <section id="step-2">
             <h3>step 2</h3>
             <h1>Trip Dates</h1>
-            <ul>
+            <ul id="instructionsDays">
+                <h4>Instructions</h4>
                 <li>Enter your trip start date and end date in the fields provided.</li>
                 <li>The number of days in your trip will be automatically calculated and displayed in the circle.</li>
+                <li>If the number of days is incorrect, please double-check your dates and adjust them as needed.</li>
+                <li>Once you have confirmed the correct number of days, you can move on to the next step of planning your trip!</li>
             </ul>
             <div class = "trip-dates">
                 <form>
-                    <label for="NumDays"><h2>Number of days</h2></label>
-                    <p>If the number of days is incorrect, please double-check your dates and adjust them as needed.</p>
-                    <input type="number" id="NumDays" name="NumDays" min="1"><br>
+                    <div id="numOfDays">
+                        <label for="NumDays"><h2>Number of days</h2></label>
+                        <input type="number" id="NumDays" name="NumDays" min="1"><br>
+                    </div>
+                    <div id="dates">
+                        <label for="start">Start date:</label><br>
+                        <input type="date" id="start" name="trip-start" min="2023-04-05"><br>
 
-                    <label for="start">Start date:</label><br>
-                    <input type="date" id="start" name="trip-start" min="2023-04-05"><br>
-
-                    <label for="end">End date:</label><br>
-                    <input type="date" id="end" name="trip-end"><br>
-
-                    <p>Once you have confirmed the correct number of days, you can move on to the next step of planning your trip!</p>
-
+                        <label for="end">End date:</label><br>
+                        <input type="date" id="end" name="trip-end"><br>
+                    </div>
+                </form>
+                <div class="btn-12">
                     <a href="#plan" class="previous">&laquo; Previous</a>
                     <a href="#step-3" class="next">Next &raquo;</a>
-                </form>
+                </div>
             </div>
         </section>
-        <!--SECTION 3: THE CREW-->
+        <!--SECTION 3: CONTACTS-->
         <section id="step-3">
             <h3>step 3</h3>
             <h1>Contacts</h1>
-            <div class="the-crew">
-                <p>Enter the member's name and phone number.</p>
-
-                <form id="contact-form">
-                    <label for="crew-name">Name:</label>
-                    <input type="text" id="crew-name" required><br>
-                  
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" required><br>
-
-                    <p>If desired, you can also add emergency contacts for each group member.</p>
-                   
-                    <label for="emergency-name">Emergency Contact Name:</label>
-                    <input type="text" id="emergency-name" required><br>
-                  
-                    <label for="emergency-phone">Emergency Contact Phone:</label>
-                    <input type="tel" id="emergency-phone" required><br>
-                  
-                    <button type="submit" id="add-contact-btn">Add Contact</button>
+            <div class="the-crew"></div>
+                <form class="form-style-3">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <div id="member">
+                            <label for="crew-name"> Name:</label>
+                            <input type="text" id="crew-name">
+                      
+                            <label for="phone"> Phone:</label>
+                            <input type="tel" id="phone" >
+                        </div>
+                    </fieldset>
+                        
+                    <fieldset> 
+                        <legend>Emergency Contact</legend>
+                        <div id="emergency">
+                            <label for="emergency-name">  Name:</label>
+                            <input type="text" id="emergency-name" >
+                      
+                            <label for="emergency-phone">Phone:</label>
+                            <input type="tel" id="emergency-phone" >
+                        </div>                                
+                    </fieldset>
                 </form>
+                <input type="submit" id="add-contact-btn" value="Add Contact">
                 <ul id="contact-list"></ul>
                 <div class="btn-3">
                     <a href="#step-2" class="previous">&laquo; Previous</a>
@@ -169,43 +179,46 @@
                     <li>Plan for delays</li>
                 </ul>
             </div>
-            <div class="transport-going">
-                <h3>To:</h3>
-                <div class="transport-buttons">
-                  <label for="t-1"><input type="radio" id="t-1" name="transport" value="Train">Train</label>
-                  <label for="h-1"><input type="radio" id="h-1" name="transport" value="Hike">Hike</label>
-                  <label for="b-1"><input type="radio" id="b-1" name="transport" value="Bus">Bus</label>
-                  <label for="f-1"><input type="radio" id="f-1" name="transport" value="Flight">Flight</label>
-                  <label for="boat-1"><input type="radio" id="boat-1" name="transport" value="Boat">Boat</label>
+            <div class="transport-choices">
+                <div class="transport-going">
+                    <h3>To:</h3>
+                    <div class="transport-buttons">
+                    <label for="t-1"><i class="fa fa-train"></i><input type="radio" id="t-1" name="transport" value="Train"></label>
+                    <label for="h-1"><i class="fa fa-person-walking"></i><input type="radio" id="h-1" name="transport" value="Hike"></label>
+                    <label for="b-1"><i class="fa fa-bus"></i><input type="radio" id="b-1" name="transport" value="Bus"></label>
+                    <label for="f-1"><i class="fa fa-plane-departure"></i><input type="radio" id="f-1" name="transport" value="Flight"></label>
+                    <label for="boat-1"><i class="fa fa fa-ship"></i><input type="radio" id="boat-1" name="transport" value="Boat"></label>
+                </div>
+                <br>
+                </div>
+                <div class="booked-going">
+                    <label for="bGoing">Have you booked?</label>
+                    <select name="bGoing" id="bGoing">
+                        <option value="Select">(y/n)</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="transport-return">
+                    <h3>From:</h3>
+                    <div class="transport-buttons">
+                    <label for="t-2"><i class="fa-solid fa-train"></i><input type="radio" id="t-2" name="transport-2" value="Train"></label>
+                    <label for="h-2"><i class="fa fa-person-walking"></i><input type="radio" id="h-2" name="transport-2" value="Hike"></label>
+                    <label for="b-2"><i class="fa fa-bus"></i></span><input type="radio" id="b-2" name="transport-2" value="Bus"></label>
+                    <label for="f-2"><i class="fa fa-plane-arrival"></i><input type="radio" id="f-2" name="transport-2" value="Flight"></label>
+                    <label for="boat-2"><i class="fa fa fa-ship"></i><input type="radio" id="boat-2" name="transport-2" value="Boat"></label>
+                </div> 
+                <br>                 
+                </div>  
+                <div class="booked-return">
+                    <label for="bReturn">Have you booked?</label>
+                    <select name="bReturn" id="bReturn">
+                        <option value="Select">(y/n)</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
                 </div>
             </div>
-            <div class="booked-going">
-                <label for="bGoing">Have you booked?</label>
-                <select name="bGoing" id="bGoing">
-                    <option value="Select">(select)</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-            <div class="transport-return">
-                <h3>From:</h3>
-                <div class="transport-buttons">
-                    <label for="t-2"><input type="radio" id="t-2" name="transport-2" value="Train">Train</label>
-                    <label for="h-2"><input type="radio" id="h-2" name="transport-2" value="Hike">Hike</label>
-                    <label for="b-2"><input type="radio" id="b-2" name="transport-2" value="Bus">Bus</label>
-                    <label for="f-2"><input type="radio" id="f-2" name="transport-2" value="Flight">Flight</label>
-                    <label for="boat-2"><input type="radio" id="boat-2" name="transport-2" value="Boat">Boat</label>
-                  </div>                  
-            </div>
-            <div class="booked-return">
-                <label for="bReturn">Have you booked?</label>
-                <select name="bReturn" id="bReturn">
-                    <option value="Select">(select)</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-              
             <br>
             <div class="btn-4">
                 <a href="#step-3" class="previous">&laquo; Previous</a>
@@ -215,32 +228,39 @@
         <!--SECTION 5: BUDGET-->
         <section id="step-5">
             <h3>step 5</h3>
-            <div id="budget">
-                <label for="budget"><h2>Budget</h2></label>
+            <div id="budgetTotal">
+                <label for="budget"><h2>Budget: </h2></label>
                 <input type="number" id="budget" name="budget"><br>
             </div>
-            <p>This page is for the total group cost.<br>
-                Individual costs will be calculated and added to the PDF based on 
-                the number of people in the group.</p>
+            <p>*This page is for the total group cost.*</p>
             <br>
-            <div class="cost-breakdown">
-                <h1>Cost breakdown</h1>
-                <label for="t-cost">Transportation</label><br>
-                <input type="number" id="t-cost" name="t-cost"><br>
-
-                <label for="a-cost">Accomodation</label><br>
-                <input type="number" id="a-cost" name="a-cost"><br>
-
-                <label for="g-cost">Groceries</label><br>
-                <input type="number" id="g-cost" name="g-cost"><br>
-
-                <label for="d-cost">Drinks</label><br>
-                <input type="number" id="d-cost" name="d-cost"><br>
-
-                <label for="e-cost">Entertainment</label><br>
-                <input type="number" id="e-cost" name="e-cost"><br>
-            </div>
+            <table class="cost-breakdown">
+                <caption><h1>Cost breakdown</h1></caption>
+                <tr>
+                  <td><label for="t-cost">Transportation: </label></td>
+                  <td><input type="number" id="t-cost" name="t-cost"></td>
+                </tr>
+                <tr>
+                  <td><label for="a-cost">Accomodation: </label></td>
+                  <td><input type="number" id="a-cost" name="a-cost"></td>
+                </tr>
+                <tr>
+                  <td><label for="g-cost">Groceries:</label></td>
+                  <td><input type="number" id="g-cost" name="g-cost"></td>
+                </tr>
+                <tr>
+                  <td><label for="d-cost">Drinks:</label></td>
+                  <td><input type="number" id="d-cost" name="d-cost"></td>
+                </tr>
+                <tr>
+                  <td><label for="e-cost">Entertainment:</label></td>
+                  <td><input type="number" id="e-cost" name="e-cost"></td>
+                </tr>
+             </table>
             <br>
+            
+            <p>*Individual costs will be calculated and added to the PDF based on 
+                the number of people in the group.*</p>
             <div class="btn-5">
                 <a href="#step-4" class="previous">&laquo; Previous</a>
                 <a href="#step-6" class="next">Next &raquo;</a>
@@ -251,8 +271,8 @@
             <h3>step 6</h3>
             <h1>Accommodation</h1>
             <div class="accommodation">
-            <p>"Additional Features" can include amenities like a private pool, personal chef, 
-                beachfront location, or even an all-inclusive package.</p>
+            <p>"Additional Features" can include amenities <br> like a private pool, personal chef, 
+                beachfront location, <br>or even an all-inclusive package.</p>
             <form>
                 <ul>
                 <div id="option1">
@@ -293,7 +313,7 @@
                 </div>
                 <div id="option3">
                     <li>
-                        <label for="option3Name">Name:</label>
+                        <label for="option3Name"> Option 3 Name:</label>
                         <input type="text" id="option3Name" name="option3Name">
                     </li>
                     <li>
@@ -321,45 +341,101 @@
         </section>
         <!--SECTION 7: PACKING LIST-->
         <section id="step-7">
-            <h3>step 7</h3>
+            <h3>Step 7</h3>
             <h1>Packing List</h1>
-            <div class="packing-list">
-                <label for="pl-1">Travel documents</label><br>
-                <p>*Passport, Travel Insurance, ID, DL, Credit Card, Visa etc*</p>
-                <input type="text" id="pl-1" name="pl-1"><br>
-
-                <label for="pl-2">Hygiene & Medical</label><br>
-                <p>*Sanitizer, Wipes, Repellent, Basic first-aid kit, Toothpaste/brush etc*</p>
-                <input type="text" id="pl-2" name="pl-2"><br>
-
-                <label for="pl-3">Clothing, Footwear & Beauty</label><br>
-                <p>*Slippers, Hat, Pajamas, Sunscreen etc*</p>
-                <input type="text" id="pl-3" name="pl-3"><br>
-
-                <label for="pl-4">Electronics</label><br>
-                <p>*Travel-sized iron, Charger, Universal Adapter, Portable Speaker etc*</p>
-                <input type="text" id="pl-4" name="pl-4"><br>
+            <div id="packingExamples">
+                <h4>Packing Ideas</h4>
+                <p>Passport, Travel Insurance, ID, DL, <br> 
+                Credit Card, Visa, Sanitizer, Wipes,<br> 
+                Repellent, Basic first-aid kit, Toothpaste/brush,<br>
+                Slippers, Hat, Pajamas, Sunscreen, <br>
+                Travel-sized iron, Charger, Universal Adapter, <br>
+                Portable Speaker etc
+                </p>
             </div>
+            
+            <form>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Item(s)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><label for="pl-1">Travel documents</label></td>
+                        <td><input type="text" id="pl-1" name="pl-1" ></td><br>
+                    </tr>
+                    <tr>
+                        <td><label for="pl-2">Hygiene &amp; Medical</label></td>
+                        <td><input type="text" id="pl-2" name="pl-2" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pl-3">Clothing, Footwear &amp; Beauty</label></td>
+                        <td><input type="text" id="pl-3" name="pl-3" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pl-4">Electronics</label></td>
+                        <td><input type="text" id="pl-4" name="pl-4" ></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
             <div class="btn-7">
-                <a href="#step-6" class="previous">&laquo; Previous</a>
-                <a href="#step-8" class="next">Next &raquo;</a>
+              <a href="#step-6" class="previous">&laquo; Previous</a>
+              <a href="#step-8" class="next">Next &raquo;</a>
             </div>
-        </section>
+          </section>
+          
         <!--SECTION 8: ITINERARY-->
         <section id="step-8">
             <h3>step 8</h3>
             <h1>Itinerary</h1>
             <p>Remember to be flexible and have a backup plan!</p>
-            <div class="itinerary">
-                <label for="eating">Eating spots</label><br>
-                <input type="text" id="eating" name="eating"><br>
-
-                <label for="site-seeing">Site seeing</label><br>
-                <input type="text" id="site-seeing" name="site-seeing"><br>
-
-                <label for="activities">Activities</label><br>
-                <input type="text" id="activities" name="activities"><br>
-            </div>
+            <ul>
+                <li>Eating Spots</li><br>
+                <li>Site Seeing</li><br>
+                <li>Activities</li>
+            </ul>
+            <table class="itinerary">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Day 1</td>
+                        <td><input type="text" id="dayOne" name="first-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td><input type="text" id="dayTwo" name="second-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 3</td>
+                        <td><input type="text" id="dayThree" name="third-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 4</td>
+                        <td><input type="text" id="dayFour" name="fourth-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 5</td>
+                        <td><input type="text" id="dayFive" name="fifth-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 6</td>
+                        <td><input type="text" id="daySix" name="sixth-day"></td>
+                    </tr>
+                    <tr>
+                        <td>Day 7</td>
+                        <td><input type="text" id="daySeven" name="seventh-day"></td>
+                    </tr>
+                </tbody>
+                </table>
             <div class="btn-8">
                 <a href="#step-7" class="previous">&laquo; Previous</a>
                 <a href="#submit-pdf" class="next">FINISH &raquo;</a>
@@ -367,40 +443,45 @@
         </section>
         <!--SECTION 9: SUBMIT PDF-->
         <section id="submit-pdf">
-            <h1>OH HEY <br>VACAY</h1>
+            <h1>OH HEY <br>VACAY !</h1>
             <p>MAKING MEMORIES<br>ALL OVER THE WORLD,<br>ONE TRIP AT A TIME!</p>
-            <button id="generate-pdf">Generate PDF</button>
+            <button id="generate-pdf">Generate PDF</button><br>
+            <a href="#tripIdeas" class="next">Get Travel Inspiration &raquo;</a>
             
         </section>
         <!--SECTION 11: TRIP IDEAS-->
-        <section id="ideas">
+        <section id="tripIdeas">
             <h1>Trip ideas</h1>
+            <h4>(Scroll down for more ideas)</h4>
             <div id="idea1">
-                <h2>Safari Adventure in Maasai Mara</h2>
-                <p>Experience the thrill of wildlife in the famous Maasai Mara Game Reserve.</p>
+                <h2><i class="fa fa-house"></i> Safari Adventure in Maasai Mara <i class="fa fa-binoculars"></i></h2>
+                <p>Experience the thrill of wildlife in the famous Maasai Mara Game Reserve.</p> 
                 <ul>
-                    <li>Stay at a tented camp or lodge and enjoy the sounds of the wilderness.</li>
-                    <li>Take a hot air balloon ride for an aerial view of the wildlife.</li>
-                    <li>Visit a Maasai village and learn about their culture.</li>
+                    <li>Stay at a <span>Tented Camp or Lodge</span> and enjoy the sounds of the wilderness. Options include high-end luxury camps or more affordable, rustic options.</li>
+                    <li>Take a <span>Hot Air Balloon Ride</span> for an aerial view of the wildlife. This is an unforgettable way to experience the vast savannahs and wildlife in the area.</li>
+                    <li>Visit a <span>Maasai Villag</span>Maasai village and learn about their culture. Get an authentic cultural experience by interacting with the Maasai people and learning about their customs and way of life.</li>
+                    <li>Witness the <span>Great Wildebeest Migration </span>, one of the most incredible wildlife spectacles on earth. This annual event sees millions of wildebeest, zebras, and gazelles migrating across the Mara in search of fresh grazing.</li>
                 </ul>
             </div>
-            <div>
-                <h2>Coastal Getaway</h2>
+            <div id="idea2">
+                <h2><i class="fa fa-umbrella-beach"></i> Coastal Getaway <i class="fa fa-water"></i></h2>
                 <p>Relax on the sandy beaches and soak up the sun.</p>
                 <ul>
-                    <li>Stay in a beautiful villa by the beach with your groups.</li>
-                    <li>Enjoy water sports activities such as jet skiing, snorkelling, and diving.</li>
-                    <li>Visit historical sites such as Fort Jesus and the Old Town of Mombasa</li>
-                    <li>Explore marine life at the Marine National Park in Malindi</li>
+                    <li>Stay in a <span>Beautiful Villa</span> by the beach with your group, complete with private pool and ocean views.</li>
+                    <li>Enjoy <span>Water Sports</span> activities such as jet skiing, snorkelling, and diving. The coastal waters are teeming with colourful marine life, including dolphins and sea turtles.</li>
+                    <li>Visit <span>Historical Sites</span> such as Fort Jesus and the Old Town of Mombasa. These ancient landmarks are a testament to the area's rich history and multicultural influences.</li>
+                    <li>Explore marine life at the <span>Marine National Park in Malindi</span>. This protected marine reserve is home to over 600 species of fish and is a great spot for snorkeling or scuba diving.</li>
+                    <li>Experience the <span>Local Cuisine</span> by trying seafood delicacies such as Swahili fish curry and grilled prawns.</li>
                 </ul>
             </div>
-            <div>
-                <h2>Mount Kenya Hiking Expedition</h2>
+            <div id="idea3">
+                <h2><i class="fa fa-person-hiking"></i> Mount Kenya Hiking Expedition <i class="fa fa-mountain"></i></i></h2>
                 <p>Enjoy breathtaking views of the mountain range and surrounding landscape.</p>
                 <ul>
-                    <li>Trek to the summit of Mount Kenya, the second highest mountain in Africa.</li>
-                    <li>Camp along the way and experience the beauty of nature.</li>
-                    <li>Visit the nearby Ol Pejeta Conservancy and see endangered wildlife like rhinos and chimpanzees.</li>
+                    <li><span>Trek to the Summit</span> of Mount Kenya, the second highest mountain in Africa. This challenging but rewarding climb takes you through diverse landscapes, from equatorial forests to alpine moorlands.</li>
+                    <li><span>Camp</span> along the way and experience the beauty of nature. Enjoy the serenity of the mountain wilderness and sleep under the stars.</li>
+                    <li>Visit the nearby Ol <span>Pejeta Conservancy</span> and see endangered wildlife like rhinos and chimpanzees. This wildlife conservancy is home to several endangered species and is a great place for a game drive or walking safari.</li>
+                    <li>Relax at the end of your hike with a stay at a <span>Luxury Lodge,</span> complete with spa treatments and gourmet dining.</li>
                 </ul>
             </div>
         </section> 

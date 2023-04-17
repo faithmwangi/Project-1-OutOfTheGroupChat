@@ -1,19 +1,16 @@
-body {
+html {
+    height: 100%;
+}
+
+body { /*BACKGROUND */
     margin: 0;
     padding: 0;
-    height: 100vh;
-}
-  
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-  
+
 
 button {
     font-size: 20px;
@@ -30,9 +27,9 @@ button {
     background-color: #008b81;
 }
 /*LANGING PAGE*/
-header h3 {
+header h3 { /**/
     text-align: center;
-    color: rgb(103, 121, 121);
+    color: rgb(57, 121, 121);
 }
 header h1 {
     font-size: 5em;
@@ -43,6 +40,7 @@ header h1 {
     color: #00aaa0;
     line-height: 1.2;
     margin-top: 10%;
+    margin-left: 8%;
 }
 header h1 span:nth-of-type(1) {
     color: black; /*to*/
@@ -56,7 +54,8 @@ header h1 span:nth-of-type(2) {
     top: 0;
     right: 0;
     width: 20%;
-    margin-top: 12%;
+    margin-top: 15%;
+    margin-right: 4%;
 }
 nav ul {
     list-style: none;
@@ -87,112 +86,268 @@ header #slogan{
     margin-top: 200px;
     font-size: 20px;
 }
-
-/*STEP 1: PLAN A TRIP*/
-#plan{
+/*USER GUIDE*/
+#userGuide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: -50px;
+    
+  }
+  
+  
+  #userGuide h1 {
+    font-size: 50px;
     text-align: center;
-    display: block;
-    margin-bottom: 30%;
-    margin-top: 12%;
-}
-#plan h3{
-    text-align: left;
-    margin-left: 30px;
-    margin-top: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
-}
-#plan h1{
-    font-size: 60px;
-}
-/*STEP 1 form*/
-.trip-info{
-    justify-content: space-between;
-    padding:  20px;
-}
-.trip-info label {
-    font-size: 30px;
     margin-bottom: 10px;
-}
-#name-the-trip,
-#location,
-#num-of-people {
-  display: inline-block;
-  width: 45%;
-  margin-right: 5%;
-}
-
-#num-of-people {
-  margin-right: 0;
-}
-.trip-info input[type="text"],
-.trip-info input[type="number"],
-.trip-info select {
-    font-size: 20px;
-    padding: 8px;
-    border-width: 7px;
-    border-radius: 40px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-
-.trip-info select option {
-    font-size: 20px;
-}
-#continue-btn,
-#save-btn {
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-}
-
-#continue-btn:hover,
-#save-btn:hover {
-    cursor: pointer;
-    background-color: #008b81;
-}
-
-/*STEP 2 "Trip Dates"*/
-#step-2{
-    text-align: center;
-    margin-bottom: 120px;
-}
-#step-2 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
+  }
+  
+  #userGuide h1 span {
+    color: #d55b3e;
+    font-size: 40px;
+  }
+  
+  
+  #userGuide h3 {
     font-size: 30px;
-}
-#step-2 h1{
-    font-size: 60px;
-}
-/*STEP 2 form*/
-.trip-dates {
+    text-align: left;
+    border-bottom: 2px solid #d55b3e;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #userGuide ul {
+    list-style:circle ;
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+  
+  #userGuide li {
+    margin-bottom: 10px;
+  }
+  .bubble{
+    margin: 0;
+    padding: 10px;
+    border: 2px solid #00aaa0;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.0;
+  }
+  #userGuide h4 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #userGuide p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #userGuide a {
+    position: absolute;
+    margin-left: 80%;
+    padding: 10px 20px;
+    background-color: #d55b3e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  #userGuide a:hover {
+    background-color: #c44a2c;
+  }
+  
+/*STEP 1: PLAN A TRIP*/
+#plan {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    padding: 50px;
+    background-color: rgba(243, 243, 243, 0.5);
 }
-.trip-dates label {
-    font-size: 30px;
+  
+#plan h3 {
+    font-size: 24px;
+    color: #8b8b8b;
     margin-bottom: 10px;
 }
-.trip-dates input[type="date"], 
-.trip-dates input[type="number"]{
+  
+#plan h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #d55b3e;
+}
+  
+#plan ul {
+    list-style-type: none;
+    margin-bottom: 50px;
+    text-align: left;
+}
+  
+#plan ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+  
+form.trip-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#name-the-trip,
+#type-of-trip {
+    flex-basis: 45%;
+}
+  
+#location,
+#num-of-people {
+    flex-basis: 45%;
+    margin-left: 10px;
+}
+  
+  
+#plan label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+#plan input[type="text"],
+#plan input[type="number"],
+#plan select {
+    font-size: 20px;
+    padding: 10px;
+    border-color: #000000;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+#plan select {
+    width: 100%;
+}
+  
+.btn-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 10%;
+}
+  
+.btn-1 .previous,
+.btn-1 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.btn-1 .previous:hover,
+.btn-1 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+  
+/*STEP 2 : TRIP DATES*/
+
+#step-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+}
+#step-2 h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00aaa0;
+}
+#step-2 h3{
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+#instructionsDays{
+    margin-left: 10%;
+    align-items: center;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: -30px;
+}
+#instructionsDays h4{
+    text-align: center;
+    font-weight: bold;
+    color: #008b81;
+    font-size: 25px;
+    margin-top: -6px;
+}
+#instructionsDays ul{
+    margin-top: -9px;
+}
+.trip-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.trip-dates form {
+    width: 155%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px;
+    margin-left: 23%;
+    margin-top: 45px;
+}
+.trip-dates label {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.trip-dates input[type="date"],
+.trip-dates input[type="number"] {
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
     border: 2px solid #00aaa0;
     margin-bottom: 20px;
-    width: 300px;
+    width: 250px;
+    color: #555;
+    
+ }  
+#numOfDays {
+    width: 50%;
+    float: right;
 }
-.trip-dates input[type="number"]{
+#numOfDays label{
+    margin-top: -80px;
+}
+
+#dates {
+    width: 45%;
+    float: left;
+    margin-top: 55px;
+}
+.trip-dates input[type="number"] {
     border-radius: 50%;
     border-width: 6px;
     width: 100px;
@@ -200,431 +355,543 @@ header #slogan{
     font-size: 50px;
     text-align: center;
     font-weight: bold;
+    margin-left: 10%;
+}
+.btn-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.previous,
+.next {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #00aaa0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-/*STEP 3 "The Crew" */
-#step-3{
-    text-align: center;
-    margin-bottom: 120px;
-}
-#step-3 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
-}
-#step-3 h1{
-    font-size: 60px;
-}
-fieldset{
-    max-width:500px;
-    margin-left: 31%;
-}
-/*STEP 3 fieldset*/
-legend{
-    font-size: 25px;
-}
-.the-crew {
+.previous:hover,
+.next:hover {
+    background-color: #fff;
+    color: #00aaa0;
+    border: 2px solid #00aaa0;
+    transition: all 0.3s ease-in-out;
+}  
+  
+/*STEP 3 CONTACTS */
+#step-3 {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    background-color: rgba(243, 243, 243, 0.5);
 }
-.the-crew label {
-    font-size: 30px;
+
+#step-3 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
     margin-bottom: 10px;
-}
-.the-crew input[type="tel"], 
-.the-crew input[type="text"],
-.the-crew input[type="email"]{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-#continue-btn-3, #save-btn-3 {
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-    margin-top: 30px;
-}
-#continue-btn-3:hover,
-#save-btn-3:hover {
-    cursor: pointer;
-    background-color: #008b81;
-}
-/*STEP 4 "Transport details"*/
-#step-4{
     text-align: center;
-    margin-bottom: 120px;
 }
-#step-4 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
-}
-#step-4 h1{
+#step-3 h1 {
     font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #d55b3e;
 }
-/*STEP 4 form*/
-
-.transport-going label{
-    font-size: 30px;
+#step-3 ul{ 
+    border-style: dashed;
+    border-color: #c44a2c;
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    margin-top: 60px;
+}  
+.form-style-3 label {
+    display:inline-block;
     margin-bottom: 10px;
 }
-.transport-going [type="button"]{
+.form-style-3 label > span {
     float: left;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: rgb(255, 253, 253);
-    border: none;
-    border-radius: 50%;
-    border-width: 6px;
     width: 100px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #338b8b;
+    padding: 20px;
+    background: #fafafa;
+    font-size: 23px;
+    
+}
+.form-style-3 fieldset legend {
+    color: #000000;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #f9f9f9;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #a09393;
+    -moz-box-shadow:-0px -1px 2px #a09393;
+    -webkit-box-shadow:-0px -1px 2px #a09393;
+    font-weight: normal;
+    font-size: 26px;
+    font-size: bold;
+}
+.form-style-3 textarea {
+    width: 250px;
     height: 100px;
 }
-.booked-going{
-    margin-bottom: 70px;
+.form-style-3 input[type=text],
+.form-style-3 input[type=tel]{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #d55b3e;
+    outline: none;
+    color:black;
+    width: 200px;
+    padding: 5px 8px 5px 8px;
+    
 }
-.booked-going select{
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-}
-.booked-going label{
-    font-size: 25px;
-}
-
-.transport-return [type="button"]{
-    float: left;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: rgb(255, 253, 253);
-    border: none;
-    border-radius: 50%;
-    border-width: 6px;
-    width: 100px;
-    height: 100px;
-}
-.transport-return{
-    margin-bottom: 70px;
-}
-.booked-return{
-    margin-left: 40%;
-    margin-top: -90px;
-    margin-bottom: 40px;
-}
-.booked-return select{
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-
-}
-.booked-return label{
-    font-size: 25px;
-}
-.transport-buttons button:hover,
-.transport-button.active-1 button:hover{
-    background-color: #555;
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+} 
+ 
+#add-contact-btn{
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
 }
 
-.transport-button.active,
-.transport-button-1.active {
-    background-color: #4caf50;
-    color: white;
+#step-3 .btn-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 10%;
 }
   
-
-/*STEP 5 "Budget"*/
-#step-5{
-    text-align: center;
-    margin-bottom: 120px;
-}
-#step-5 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
-}
-#step-5 h1{
-    font-size: 50px;
-}
-#step-5 label{
-    font-size: 20px;
-}
-#step-5 input{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-
-/*STEP 5 form*/
-.cost-breakdown {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.cost-breakdown label {
-    font-size: 30px;
-}
-.cost-breakdown input[type="number"]{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-#con-5, #sav-5 {
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-}
-#continue-btn-5:hover,
-#save-btn-5:hover {
+#step-3 .previous,
+#step-3 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: #008b81;
 }
-/*STEP 6 "Accomodation"*/
-#step-6{
+  
+#step-3 .previous:hover,
+#step-3 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+/*STEP 4 "Transport details"*/ 
+
+#step-4 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 10%;
     text-align: center;
-    margin-bottom: 120px;
 }
-#step-6 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
+#step-4 h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color:#00aaa0;
 }
-#step-6 h1{
-    font-size: 50px;
-}
-#step-6 label{
+#step-4 p{
+    text-align: center;
     font-size: 20px;
 }
-#step-6 input{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
+#tips{
+    float: right;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 10px;
+    border-radius: 20px;
 }
-/*STEP 6 form*/
-.accomodation {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    list-style: none;
+#tips h4{
+    text-align: center;
+    font-weight: bold;
+    color: #008b81;
+    font-size: 25px;
+    margin-top: -6px;
 }
-.accomodation label {
-    font-size: 30px;
+#tips ul{
+    margin-top: -9px;
 }
-.accomodation ul{
-    display: flex;
-    list-style: none;
+.transport-choices{
+    font-size: 25px;
+    float: right;
+    margin-right: 14%;
+    display: inline-block;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
-.accomodation li{
-    width: 335px;
-    background-color: #f9f9f9;
-    box-shadow: 5px 5px lightblue;
-    padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: brightness(10px);
-}
-.accomodation input[type="text"]{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-#continue-btn-6, #save-btn-6 {
-    justify-content: center;
- 
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-}
-#continue-btn-6:hover,
-#save-btn-6:hover {
+.transport-buttons label {
+    align-items: center;
+    margin-bottom: 10px;
     cursor: pointer;
-    background-color: #008b81;
+    font-size: 40px;
+}
+#step-4 select{
+    font-size: 20px;
+    border: none;
+}
+/* Style the previous and next buttons */
+#step-4 .btn-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30%;
+    width: 80%;
+  
+}
+  
+#step-4 .previous,
+#step-4 .next {
+    padding: 0.5rem 1rem;
+    background-color:#00aaa0;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #00aaa0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-4 .previous:hover,
+#step-4 .next:hover {
+    background-color: #fefefe;
+    color:#00aaa0 ;
+}
+#step-4 .previous{
+    margin-left: 25%;
+}
+/*STEP 5 "Budget"*/
+#step-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background-color: rgba(243, 243, 243, 0.5);
+}
+#step-5 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#budgetTotal label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    font-size: 30px;
+    margin-right: 20px;
+    color: #c44a2c;
+}
+#budgetTotal input[type=number]{
+    font-size: 30px;
+    border-radius: 5px;
+}
+#step-5 table{
+    font-size: 28px;
+}
+caption{
+    color:#c44a2c
+}
+.cost-breakdown input[type=number] {
+    font-size: 28px;
+    text-align: center;
+    border-radius: 10px;
+    border-width: 0.5px;
+}
+#step-5 .previous,
+#step-5 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-5 .previous:hover,
+#step-5 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+/*STEP 6 "Accomodation"*/
+#step-6 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
+}
+  
+#step-6 h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #00aaa0;
+}
+  
+#step-6 p {
+    float: right;
+    margin-right: 25px;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 10px;
+    border-radius: 20px;
+}
+  
+#option1,
+#option2,
+#option3 {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+    vertical-align: top;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+#option1 label,
+#option2 label,
+#option3 label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#option1 input,
+#option2 input,
+#option3 input,
+#option1 textarea,
+#option2 textarea,
+#option3 textarea {
+    width: 100%;
+    padding: 5px;
+    border-style: solid;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+  
+#option1 textarea,
+#option2 textarea,
+#option3 textarea {
+    height: 80px;
+}
+  
+#option1 input,
+#option3 input{
+    border-color:black;
+    border-width: 2px;
+    border-radius: 7px;
+}
+#option2 input{
+    border-color: #008b81;
+    border-width: 2px;
+    border-radius: 7px;
+}
+.btn-6{
+    align-items: center;
+    margin-left: 40%;
+    margin-bottom: 150px;
+    margin-top: 50px;
 }
 /*STEP 7 "packing-list"*/
 #step-7{
+    background-color: rgba(243, 243, 243, 0.5);
     text-align: center;
     margin-bottom: 120px;
 }
 #step-7 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
 }
 #step-7 h1{
     font-size: 50px;
+    color: #c44a2c;
+    margin-top: 100px;
 }
 #step-7 label{
-    font-size: 20px;
+    font-size: 25px;
+    display: inline-block;
+}
+#packingExamples{
+    float: right;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #c44a2c;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+#packingExamples h4{
+    text-align: center;
+    font-weight: bold;
+    color: #c44a2c;
+    font-size: 25px;
+    margin-top: -6px;
+}
+#step-7 table{
+    margin-left: 120px;
+}
+#step-7 table th{
+    font-size: 24px;
+    text-decoration: underline;
 }
 #step-7 input{
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid #00aaa0;
+    border: 2px solid #c44a2c;;
     margin-bottom: 20px;
     width: 300px;
 }
-/*STEP 7 form*/
-.packing-list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+.btn-7{
+    margin-top: 100px;
 }
-.packing-list label {
-    font-size: 30px;
-}
-.packing-list input[type="text"]{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
-}
-#continue-btn-7, #save-btn-7 {
-    justify-content: center;
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
-}
-#continue-btn-7:hover,
-#save-btn-7:hover {
+#step-7 .previous,
+#step-7 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: #008b81;
+}
+  
+#step-7 .previous:hover,
+#step-7 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
 }
 /*STEP 8 "Itinerary"*/
-#step-8{
-    text-align: center;
-    margin-bottom: 120px;
-}
+
 #step-8 h3{
-    text-align: left;
-    margin-left: 30px;
-    color: rgb(136, 136, 136);
-    font-size: 30px;
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
 }
 #step-8 h1{
     font-size: 50px;
+    color: #008b81;
+    margin-top: 60px;
+    text-align: center;
 }
-#step-8 label{
+#step-8 p{
     font-size: 20px;
+    text-align: center;
 }
-#step-8 input{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
+#step-8 ul{
+    float: right;
+    margin-right: 20%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 15px;
+    border-radius: 20px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 100px;
 }
-/*STEP 8 form*/
-.itinerary {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+
+#tips ul{
+    margin-top: -9px;
 }
-.itinerary label {
+#step-8 table{
+    margin-left: 30%;
     font-size: 30px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
-.itinerary input[type="text"]{
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #00aaa0;
-    margin-bottom: 20px;
-    width: 300px;
+table.itinerary input {
+    margin-left: 20px;
+    font-size: 37px;
+    border-radius: 7px;
+    border-color: #00aaa0;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+.btn-8 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 24%;
 }
-#continue-btn-8, #save-btn-8 {
-    justify-content: center;
+.previous,
+.next {
+    padding: 10px 20px;
     display: inline-block;
-    font-size: 20px;
+    background-color: #00aaa0;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #00aaa0;
-    color: white;
-    border: none;
-    margin-right: 10px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
 }
-#continue-btn-8:hover,
-#save-btn-8:hover {
-    cursor: pointer;
-    background-color: #008b81;
-}
+
+.previous:hover,
+.next:hover {
+    background-color: #fff;
+    color: #00aaa0;
+    border: 2px solid #00aaa0;
+    transition: all 0.3s ease-in-out;
+} 
 
 /*SUBMIT PDF*/
 #submit-pdf {
-    background-color: #F9F9F9;
+    background-color: rgba(243, 243, 243, 0.5);
     padding: 50px;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
   }
   
 #submit-pdf h1 {
@@ -634,13 +901,14 @@ legend{
     margin-bottom: 20px;
     color: #1F3B45;
     text-transform: uppercase;
-    margin-top: -20px;
+    margin-top: 170px;
 }
 
 #submit-pdf p {
     font-size: 50px;
     margin-bottom: 50px;
     color: #888888;
+    margin-top: 200px;
 }
 
 #generate-pdf {
@@ -648,7 +916,7 @@ legend{
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #00aaa0;
+    background-color: #d55b3e;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
@@ -658,13 +926,13 @@ legend{
 #generate-pdf:hover {
     background-color: #1F3B45;
 }
-/*MY TRIP*/  
-#trips {
+/*MY TRIPS*/  
+#tripIdeas {
     background-color: #FFFFFF;
     padding: 50px;
 }
 
-#trips h1 {
+#tripIdeas h1 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -672,64 +940,80 @@ legend{
     text-transform: uppercase;
 }
 
-fieldset {
-    margin-top: 50px;
-    border: none;
-    padding: 0;
-}
-  
-legend {
-    font-size: 20px;
-    font-weight: bold;
-    color: #1F3B45;
-    text-transform: uppercase;
-}
 /*TRIP IDEAS*/  
-#ideas {
+#tripIdeas {
     background-color: #F9F9F9;
     padding: 50px;
+    align-items: center;
+}
+#tripIdeas h2{
+    font-size: 60px;
+}
+#tripIdeas p{
+    font-size: 24px;
+}
+#tripIdeas i {
+    font-size: 60px;
+    margin-top: 13px;
 }
   
-#ideas h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #1F3B45;
-    text-transform: uppercase;
-}
-  
-#ideas ul {
+#tripIdeas ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 30px;
 }
   
-#ideas li {
+#tripIdeas li {
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
     background-color: #FFFFFF;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 300px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
-#ideas li h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #1F3B45;
-}
-  
-#ideas li p {
+#tripIdeas li p {
     font-size: 18px;
     color: #888888;
     margin-bottom: 0;
 }
-  
+#idea1 i{
+    color: #c44a2c;
+}
+#idea1 span{
+    font-weight: bolder;
+    color: #c44a2c;
+}
+#idea1 li{
+    box-shadow: 0px 3px 3px #c44a2c;
+}
+#idea2 i{
+    color: #00aaa0;
+}
+#idea2 span{
+    font-weight: bolder;
+    color: #00aaa0;
+}
+#idea2 li{
+    box-shadow: 0px 3px 3px #00aaa0;
+}
+#idea3 i{
+    color: olivedrab;
+}
+#idea3 span{
+    font-weight: bolder;
+    color: olivedrab;
+}
+#idea3 li{
+    box-shadow: 0px 3px 3px olivedrab;
+}
