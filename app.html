@@ -10,6 +10,7 @@
     <!--JSPDF CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </head>
 <body id="travelPlanner">
     <header id="header">
@@ -41,6 +42,7 @@
 
             <h3>User Guide:</h3>
             <ul>
+                <li>Click "Start" to begin.</li>
                 <li>To navigate to the next page, click the "Next" button.</li>
                 <li>To go back to the previous page, click the "Previous" button.</li>
                 <li>When you reach the end of the planner, press the "Download PDF" button to obtain a copy of your trip plan.</li>
@@ -90,7 +92,6 @@
                         <option value="adventure">Adventure</option>
                         <option value="city">City Break</option>
                         <option value="family">Family</option>
-                        <option value="romantic">Romantic</option>
                     </select>
                 </div>
             </form>
@@ -184,6 +185,7 @@
                     <h3>To:</h3>
                     <div class="transport-buttons">
                     <label for="t-1"><i class="fa fa-train"></i><input type="radio" id="t-1" name="transport" value="Train"></label>
+                    <label for="c-1"><i class="fa fa-car"></i><input type="radio" id="c-1" name="transport" value="Car"></label>
                     <label for="h-1"><i class="fa fa-person-walking"></i><input type="radio" id="h-1" name="transport" value="Hike"></label>
                     <label for="b-1"><i class="fa fa-bus"></i><input type="radio" id="b-1" name="transport" value="Bus"></label>
                     <label for="f-1"><i class="fa fa-plane-departure"></i><input type="radio" id="f-1" name="transport" value="Flight"></label>
@@ -200,9 +202,10 @@
                     </select>
                 </div>
                 <div class="transport-return">
-                    <h3>From:</h3>
+                    <h3>Return:</h3>
                     <div class="transport-buttons">
                     <label for="t-2"><i class="fa-solid fa-train"></i><input type="radio" id="t-2" name="transport-2" value="Train"></label>
+                    <label for="c-2"><i class="fa fa-car"></i></i><input type="radio" id="c-2" name="transport-2" value="Car"></label>
                     <label for="h-2"><i class="fa fa-person-walking"></i><input type="radio" id="h-2" name="transport-2" value="Hike"></label>
                     <label for="b-2"><i class="fa fa-bus"></i></span><input type="radio" id="b-2" name="transport-2" value="Bus"></label>
                     <label for="f-2"><i class="fa fa-plane-arrival"></i><input type="radio" id="f-2" name="transport-2" value="Flight"></label>
@@ -259,8 +262,6 @@
              </table>
             <br>
             
-            <p>*Individual costs will be calculated and added to the PDF based on 
-                the number of people in the group.*</p>
             <div class="btn-5">
                 <a href="#step-4" class="previous">&laquo; Previous</a>
                 <a href="#step-6" class="next">Next &raquo;</a>
@@ -355,7 +356,7 @@
             </div>
             
             <form>
-                <table>
+                <table id="table">
                     <thead>
                     <tr>
                         <th>Description</th>
@@ -459,7 +460,7 @@
                 <ul>
                     <li>Stay at a <span>Tented Camp or Lodge</span> and enjoy the sounds of the wilderness. Options include high-end luxury camps or more affordable, rustic options.</li>
                     <li>Take a <span>Hot Air Balloon Ride</span> for an aerial view of the wildlife. This is an unforgettable way to experience the vast savannahs and wildlife in the area.</li>
-                    <li>Visit a <span>Maasai Villag</span>Maasai village and learn about their culture. Get an authentic cultural experience by interacting with the Maasai people and learning about their customs and way of life.</li>
+                    <li>Visit a <span>Maasai Village</span>Maasai village and learn about their culture. Get an authentic cultural experience by interacting with the Maasai people and learning about their customs and way of life.</li>
                     <li>Witness the <span>Great Wildebeest Migration </span>, one of the most incredible wildlife spectacles on earth. This annual event sees millions of wildebeest, zebras, and gazelles migrating across the Mara in search of fresh grazing.</li>
                 </ul>
             </div>
@@ -480,7 +481,7 @@
                 <ul>
                     <li><span>Trek to the Summit</span> of Mount Kenya, the second highest mountain in Africa. This challenging but rewarding climb takes you through diverse landscapes, from equatorial forests to alpine moorlands.</li>
                     <li><span>Camp</span> along the way and experience the beauty of nature. Enjoy the serenity of the mountain wilderness and sleep under the stars.</li>
-                    <li>Visit the nearby Ol <span>Pejeta Conservancy</span> and see endangered wildlife like rhinos and chimpanzees. This wildlife conservancy is home to several endangered species and is a great place for a game drive or walking safari.</li>
+                    <li>Visit the nearby <span>Ol Pejeta Conservancy</span> and see endangered wildlife like rhinos and chimpanzees. This wildlife conservancy is home to several endangered species and is a great place for a game drive or walking safari.</li>
                     <li>Relax at the end of your hike with a stay at a <span>Luxury Lodge,</span> complete with spa treatments and gourmet dining.</li>
                 </ul>
             </div>

@@ -2,16 +2,6 @@ html {
     height: 100%;
 }
 
-body { /*BACKGROUND */
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
 button {
     font-size: 20px;
     padding: 10px 20px;
@@ -62,7 +52,7 @@ nav ul {
     padding: 0;
   }
   
-  nav a{
+nav a{
     display:block;
     padding: 5px 25px;
     margin-bottom: 10px;
@@ -71,20 +61,22 @@ nav ul {
     background-color: antiquewhite;
 }
 nav a:hover{
-    background-color: #d55b3e
+    background-color: #f7f7f7
 }
 
 header #nav-bar ul a{
-    margin-bottom: 10%;
+    margin-bottom: 12%;
     text-decoration: none;
     font-size: 50px;
-    color: #333;
+    color: black;
+    
 
 }
 header #slogan{
     text-align: center;
     margin-top: 200px;
     font-size: 20px;
+    margin-bottom: 50px;
 }
 /*USER GUIDE*/
 #userGuide {
@@ -850,7 +842,7 @@ caption{
 }
 table.itinerary input {
     margin-left: 20px;
-    font-size: 37px;
+    font-size: 16px;
     border-radius: 7px;
     border-color: #00aaa0;
     border-style: solid;
