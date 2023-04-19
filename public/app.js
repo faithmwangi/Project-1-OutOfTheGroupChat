@@ -1,3 +1,158 @@
+const sortCountriesAlphabeticallyAscending = (countries) => {
+  return countries.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+const countries = [
+  {
+    "Countries": [
+      {
+        "name": "United Arabs Emirates",
+        "capital": "Abu Dhabi"
+      },
+      {
+        "name": "Argentina",
+        "capital": "Buenos Aires"
+      },
+      {
+        "name": "Belgium",
+        "capital": "Brussels"
+      },
+      {
+        "name": "Burundi",
+        "capital": "Gitega"
+      },
+      {
+        "name": "Brazil",
+        "capital": "Brasilia"
+      },
+      {
+        "name": "Botswana",
+        "capital": "Gaborone"
+      },
+      {
+        "name": "Canada",
+        "capital": "Ottawa"
+      },
+      {
+        "name": "Switzerland",
+        "capital": "Bern"
+      },
+      {
+        "name": "Colombia",
+        "capital": "Bogota"
+      },
+      {
+        "name": "Costa Rica",
+        "capital": "San Jose"
+      },
+      {
+        "name": "Cuba",
+        "capital": "Havana"
+      },
+      {
+        "name": "Germany",
+        "capital": "Berlin"
+      },
+      {
+        "name": "Denmark",
+        "capital": "Copenhagen"
+      },
+      {
+        "name": "Egypt",
+        "capital": "Cairo"
+      },
+      {
+        "name": "Spain",
+        "capital": "Madrid"
+      },
+      {
+        "name": "Fiji",
+        "capital": "Suva"
+      },
+      {
+        "name": "France",
+        "capital": "Paris"
+      },
+      {
+        "name": "Grenada",
+        "capital": "St. George's"
+      },
+      {
+        "name": "Greece",
+        "capital": "Athens"
+      },
+      {
+        "name": "Kenya",
+        "capital": "Nairobi"
+      },
+      {
+        "name": "South Korea",
+        "capital": "Seoul"
+      },
+      {
+        "name": "Morocco",
+        "capital": "Rabat"
+      },
+      {
+        "name": "Mexico",
+        "capital": "Mexico City"
+      },
+      {
+        "name": "Nigeria",
+        "capital": "Abuja"
+      },
+      {
+        "name": "Norway",
+        "capital": "Olso"
+      },
+      {
+        "name": "Qatar",
+        "capital": "Doha"
+      },
+      {
+        "name": "Singapore",
+        "capital": "Singapore"
+      },
+      {
+        "name": "Thailand",
+        "capital": "Bangkok"
+      },
+      {
+        "name": "Turkey",
+        "capital": "Ankara"
+      },
+      {
+        "name": "Tanzania",
+        "capital": "Dodoma"
+      }
+    ]
+  }
+];
+
+const sortedCountries = sortCountriesAlphabeticallyAscending(countries[0].Countries);
+const destinationInput = document.getElementById('destination');
+const suggestionsContainer = document.createElement('ul');
+suggestionsContainer.setAttribute('id', 'suggestions');
+destinationInput.parentNode.appendChild(suggestionsContainer);
+
+destinationInput.addEventListener('input', () => {
+  const inputValue = destinationInput.value.toLowerCase();
+  suggestionsContainer.innerHTML = '';
+  const matchingCountries = sortedCountries.filter(country => 
+    country.name.toLowerCase().startsWith(inputValue)
+    );
+    matchingCountries.forEach(country => {
+    const suggestion = document.createElement('li');
+    suggestion.textContent = country.name;
+    suggestion.addEventListener('click', () => {
+    destinationInput.value = country.name;
+    suggestionsContainer.innerHTML = '';
+    });
+    suggestionsContainer.appendChild(suggestion);
+    });
+    });
+   
+
 
 //DISPLAY THE NUMBER OF DAYS
 const startInput = document.getElementById("start");
@@ -54,7 +209,7 @@ var button = document.getElementById("generate-pdf");
       var pageTitle = document.querySelector("#page-title h3").textContent;
       //TRIP INFO
       var tripName =  $('input[name="trip-name"]').val();
-      var tripDestination = "Destination: " + $('input[name="destination"]').val();
+      var tripDestination = "Destination Country: " + $('input[name="destination"]').val();
       var numPeople = "Number of people: " + $('input[name="num-people"]').val();
       var typeOfTrip = "Trip Type: " + $('input[name="trip-type"]').val();
       //TRIP DATE
