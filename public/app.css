@@ -1,0 +1,1017 @@
+html {
+    height: 100%;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #00aaa0;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #008b81;
+}
+/*LANGING PAGE*/
+header h3 { /**/
+    text-align: center;
+    color: rgb(57, 121, 121);
+}
+header h1 {
+    font-size: 5em;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    font-size: 125px;
+    color: #00aaa0;
+    line-height: 1.2;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+header h1 span:nth-of-type(1) {
+    color: black; /*to*/
+}
+  
+header h1 span:nth-of-type(2) {
+    color: #d55b3e; /*next*/
+}
+#nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    margin-top: 15%;
+    margin-right: 4%;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+nav a{
+    display:block;
+    padding: 5px 25px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    box-shadow: 0px 1px 5px #d55b3e;
+    background-color: antiquewhite;
+}
+nav a:hover{
+    background-color: #f7f7f7
+}
+
+header #nav-bar ul a{
+    margin-bottom: 12%;
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    
+
+}
+header #slogan{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+#slogan span{
+    font-size: 24px;
+    font-weight: bold;
+    color: #6b9c99;
+}
+/*USER GUIDE*/
+#userGuide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: -50px;
+    
+  }
+  
+  
+  #userGuide h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  #userGuide h1 span {
+    color: #d55b3e;
+    font-size: 40px;
+  }
+  
+  
+  #userGuide h3 {
+    font-size: 30px;
+    text-align: left;
+    border-bottom: 2px solid #d55b3e;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #userGuide ul {
+    list-style:circle ;
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+  }
+  
+  #userGuide li {
+    margin-bottom: 10px;
+  }
+  .bubble{
+    margin: 0;
+    padding: 10px;
+    border: 2px solid #00aaa0;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.0;
+  }
+  #userGuide h4 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #userGuide p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  #userGuide a {
+    position: absolute;
+    margin-left: 80%;
+    padding: 10px 20px;
+    background-color: #d55b3e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  #userGuide a:hover {
+    background-color: #c44a2c;
+  }
+  
+/*STEP 1: PLAN A TRIP*/
+#plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(243, 243, 243, 0.5);
+}
+  
+#plan h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+  
+#plan h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #d55b3e;
+}
+  
+#plan ul {
+    list-style-type: none;
+    margin-bottom: 50px;
+    text-align: left;
+}
+  
+#plan ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+  
+form.trip-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#name-the-trip,
+#type-of-trip {
+    flex-basis: 45%;
+}
+  
+#location,
+#num-of-people {
+    flex-basis: 45%;
+    margin-left: 10px;
+}
+  
+  
+#plan label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+#plan input[type="text"],
+#plan input[type="number"],
+#plan select {
+    font-size: 20px;
+    padding: 10px;
+    border-color: #000000;
+    border-width: 3px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+#plan select {
+    width: 100%;
+}
+  
+.btn-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 10%;
+}
+  
+.btn-1 .previous,
+.btn-1 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.btn-1 .previous:hover,
+.btn-1 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+  
+/*STEP 2 : TRIP DATES*/
+
+#step-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+}
+#step-2 h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00aaa0;
+}
+#step-2 h3{
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+#instructionsDays{
+    margin-left: 10%;
+    align-items: center;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: -30px;
+}
+#instructionsDays h4{
+    text-align: center;
+    font-weight: bold;
+    color: #008b81;
+    font-size: 25px;
+    margin-top: -6px;
+}
+#instructionsDays ul{
+    margin-top: -9px;
+}
+.trip-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.trip-dates form {
+    width: 155%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px;
+    margin-left: 23%;
+    margin-top: 45px;
+}
+.trip-dates label {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.trip-dates input[type="date"],
+.trip-dates input[type="number"] {
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00aaa0;
+    margin-bottom: 20px;
+    width: 250px;
+    color: #555;
+    
+ }  
+#numOfDays {
+    width: 50%;
+    float: right;
+}
+#numOfDays label{
+    margin-top: -80px;
+}
+
+#dates {
+    width: 45%;
+    float: left;
+    margin-top: 55px;
+}
+.trip-dates input[type="number"] {
+    border-radius: 50%;
+    border-width: 6px;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.btn-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.previous,
+.next {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #00aaa0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: #fff;
+    color: #00aaa0;
+    border: 2px solid #00aaa0;
+    transition: all 0.3s ease-in-out;
+}  
+  
+/*STEP 3 CONTACTS */
+#step-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(243, 243, 243, 0.5);
+}
+
+#step-3 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#step-3 h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #d55b3e;
+}
+#step-3 ul{ 
+    border-style: dashed;
+    border-color: #c44a2c;
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    margin-top: 60px;
+}  
+.form-style-3 label {
+    display:inline-block;
+    margin-bottom: 10px;
+}
+.form-style-3 label > span {
+    float: left;
+    width: 100px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #338b8b;
+    padding: 20px;
+    background: #fafafa;
+    font-size: 23px;
+    
+}
+.form-style-3 fieldset legend {
+    color: #000000;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #f9f9f9;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #a09393;
+    -moz-box-shadow:-0px -1px 2px #a09393;
+    -webkit-box-shadow:-0px -1px 2px #a09393;
+    font-weight: normal;
+    font-size: 26px;
+    font-size: bold;
+}
+.form-style-3 textarea {
+    width: 250px;
+    height: 100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=tel]{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #d55b3e;
+    outline: none;
+    color:black;
+    width: 200px;
+    padding: 5px 8px 5px 8px;
+    
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+} 
+ 
+#add-contact-btn{
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+#step-3 .btn-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 10%;
+}
+  
+#step-3 .previous,
+#step-3 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-3 .previous:hover,
+#step-3 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+/*STEP 4 "Transport details"*/ 
+
+#step-4 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 10%;
+    text-align: center;
+}
+#step-4 h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color:#00aaa0;
+}
+#step-4 p{
+    text-align: center;
+    font-size: 20px;
+}
+#tips{
+    float: right;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 10px;
+    border-radius: 20px;
+}
+#tips h4{
+    text-align: center;
+    font-weight: bold;
+    color: #008b81;
+    font-size: 25px;
+    margin-top: -6px;
+}
+#tips ul{
+    margin-top: -9px;
+}
+.transport-choices{
+    font-size: 25px;
+    float: right;
+    margin-right: 14%;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.transport-buttons label {
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 40px;
+}
+#step-4 select{
+    font-size: 20px;
+    border: none;
+}
+/* Style the previous and next buttons */
+#step-4 .btn-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30%;
+    width: 80%;
+  
+}
+  
+#step-4 .previous,
+#step-4 .next {
+    padding: 0.5rem 1rem;
+    background-color:#00aaa0;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #00aaa0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-4 .previous:hover,
+#step-4 .next:hover {
+    background-color: #fefefe;
+    color:#00aaa0 ;
+}
+#step-4 .previous{
+    margin-left: 25%;
+}
+/*STEP 5 "Budget"*/
+#step-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background-color: rgba(243, 243, 243, 0.5);
+}
+#step-5 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#budgetTotal label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    font-size: 30px;
+    margin-right: 20px;
+    color: #c44a2c;
+}
+#budgetTotal input[type=number]{
+    font-size: 30px;
+    border-radius: 5px;
+}
+#step-5 table{
+    font-size: 28px;
+}
+caption{
+    color:#c44a2c
+}
+.cost-breakdown input[type=number] {
+    font-size: 28px;
+    text-align: center;
+    border-radius: 10px;
+    border-width: 0.5px;
+}
+#step-5 .previous,
+#step-5 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-5 .previous:hover,
+#step-5 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+/*STEP 6 "Accomodation"*/
+#step-6 h3 {
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
+}
+  
+#step-6 h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #00aaa0;
+}
+  
+#step-6 p {
+    float: right;
+    margin-right: 25px;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 10px;
+    border-radius: 20px;
+}
+  
+#option1,
+#option2,
+#option3 {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+    vertical-align: top;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+#option1 label,
+#option2 label,
+#option3 label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+#option1 input,
+#option2 input,
+#option3 input,
+#option1 textarea,
+#option2 textarea,
+#option3 textarea {
+    width: 100%;
+    padding: 5px;
+    border-style: solid;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+  
+#option1 textarea,
+#option2 textarea,
+#option3 textarea {
+    height: 80px;
+}
+  
+#option1 input,
+#option3 input{
+    border-color:black;
+    border-width: 2px;
+    border-radius: 7px;
+}
+#option2 input{
+    border-color: #008b81;
+    border-width: 2px;
+    border-radius: 7px;
+}
+.btn-6{
+    align-items: center;
+    margin-left: 40%;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+/*STEP 7 "packing-list"*/
+#step-7{
+    background-color: rgba(243, 243, 243, 0.5);
+    text-align: center;
+    margin-bottom: 120px;
+}
+#step-7 h3{
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
+}
+#step-7 h1{
+    font-size: 50px;
+    color: #c44a2c;
+    margin-top: 100px;
+}
+#step-7 label{
+    font-size: 25px;
+    display: inline-block;
+}
+#packingExamples{
+    float: right;
+    margin-right: 10%;
+    border-style: dashed;
+    border-color: #c44a2c;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+#packingExamples h4{
+    text-align: center;
+    font-weight: bold;
+    color: #c44a2c;
+    font-size: 25px;
+    margin-top: -6px;
+}
+#step-7 table{
+    margin-left: 120px;
+}
+#step-7 table th{
+    font-size: 24px;
+    text-decoration: underline;
+}
+#step-7 input{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #c44a2c;;
+    margin-bottom: 20px;
+    width: 300px;
+}
+.btn-7{
+    margin-top: 100px;
+}
+#step-7 .previous,
+#step-7 .next {
+    padding: 0.5rem 1rem;
+    background-color:#d55b3e;
+    color: #fff;
+    border-width: 2px ;
+    border-color: #d55b3e;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+#step-7 .previous:hover,
+#step-7 .next:hover {
+    background-color: #fefefe;
+    color:#d55b3e ;
+}
+/*STEP 8 "Itinerary"*/
+
+#step-8 h3{
+    font-size: 24px;
+    color: #8b8b8b;
+    margin-top: 200px;
+    text-align: center;
+}
+#step-8 h1{
+    font-size: 50px;
+    color: #008b81;
+    margin-top: 60px;
+    text-align: center;
+}
+#step-8 p{
+    font-size: 20px;
+    text-align: center;
+}
+#step-8 ul{
+    float: right;
+    margin-right: 20%;
+    border-style: dashed;
+    border-color: #07554f;
+    padding: 15px;
+    border-radius: 20px;
+    list-style: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+#tips ul{
+    margin-top: -9px;
+}
+#step-8 table{
+    margin-left: 30%;
+    font-size: 30px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+table.itinerary input {
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 20, 20;
+    border-radius: 7px;
+    border-color: #00aaa0;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+.btn-8 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 24%;
+}
+.previous,
+.next {
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #00aaa0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: #fff;
+    color: #00aaa0;
+    border: 2px solid #00aaa0;
+    transition: all 0.3s ease-in-out;
+} 
+
+/*SUBMIT PDF*/
+#submit-pdf {
+    background-color: rgba(243, 243, 243, 0.5);
+    padding: 50px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  
+#submit-pdf h1 {
+    float: left;
+    font-size: 150px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1F3B45;
+    text-transform: uppercase;
+    margin-top: 170px;
+}
+
+#submit-pdf p {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #888888;
+    margin-top: 200px;
+}
+
+#generate-pdf {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #d55b3e;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generate-pdf:hover {
+    background-color: #1F3B45;
+}
+/*MY TRIPS*/  
+#tripIdeas {
+    background-color: #FFFFFF;
+    padding: 50px;
+}
+
+#tripIdeas h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1F3B45;
+    text-transform: uppercase;
+}
+
+/*TRIP IDEAS*/  
+#tripIdeas {
+    background-color: #F9F9F9;
+    padding: 50px;
+    align-items: center;
+}
+#tripIdeas h2{
+    font-size: 60px;
+}
+#tripIdeas p{
+    font-size: 24px;
+}
+#tripIdeas i {
+    font-size: 60px;
+    margin-top: 13px;
+}
+  
+#tripIdeas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+  
+#tripIdeas li {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#tripIdeas li p {
+    font-size: 18px;
+    color: #888888;
+    margin-bottom: 0;
+}
+#idea1 i{
+    color: #c44a2c;
+}
+#idea1 span{
+    font-weight: bolder;
+    color: #c44a2c;
+}
+#idea1 li{
+    box-shadow: 0px 3px 3px #c44a2c;
+}
+#idea2 i{
+    color: #00aaa0;
+}
+#idea2 span{
+    font-weight: bolder;
+    color: #00aaa0;
+}
+#idea2 li{
+    box-shadow: 0px 3px 3px #00aaa0;
+}
+#idea3 i{
+    color: olivedrab;
+}
+#idea3 span{
+    font-weight: bolder;
+    color: olivedrab;
+}
+#idea3 li{
+    box-shadow: 0px 3px 3px olivedrab;
+}
