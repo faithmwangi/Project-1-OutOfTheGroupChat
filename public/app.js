@@ -211,7 +211,7 @@ var button = document.getElementById("generate-pdf");
       var tripName =  $('input[name="trip-name"]').val();
       var tripDestination = "Destination Country: " + $('input[name="destination"]').val();
       var numPeople = "Number of people: " + $('input[name="num-people"]').val();
-      var typeOfTrip = "Trip Type: " + $('input[name="trip-type"]').val();
+      var typeOfTrip = "Trip Type: " + $('#trip-type option:selected').val();
       //TRIP DATE
       var tripDuration = "Trip duration (days): " + $('input[name="NumDays"]').val();
       var tripStart = "Start date: " + $('input[name="trip-start"]').val();
